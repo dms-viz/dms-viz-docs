@@ -19,9 +19,12 @@ hero:
 
 features:
   - title: Flexible Inputs
+    icon: 📈
     details: Our command line tool helps you format your data for visualization.
   - title: Lots of Customization
+    icon: 🛠️
     details: Customize how your data is visualized and the look of the protein structure.
   - title: Shareable URLs
+    icon: 🔗
     details: Share your visualization in papers or with collaborators via URL links.
 ---

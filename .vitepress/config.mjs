@@ -40,7 +40,7 @@ export default defineConfig({
         text: "Introduction",
         items: [
           { text: "What is dms-viz?", link: "/what-is-dms-viz" },
-          { text: "Getting Started" },
+          { text: "Getting Started", link: "/getting-started" },
         ],
       },
       {

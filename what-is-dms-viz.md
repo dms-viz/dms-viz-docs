@@ -1,6 +1,6 @@
 # What is dms-viz?
 
-Hi there 👋, if you've got some mutation-level data that you want to view on an interactive 3D protein structure, you're in the right place! **dms-viz** is a suite of tools that help you take quantitative data associated with mutations to a protein and analyze that data using intutive visual summaries in the context of a 3D protein structure. Visualizations created with **dms-viz** are intended to be _flexible_, _customizable_, and _shareable_.
+Hi there 👋, if you've got some mutation-level data that you want to view on an interactive 3D protein structure, you're in the right place! **`dms-viz`** is a suite of tools that help you take quantitative data associated with mutations to a protein and analyze that data using intutive visual summaries in the context of a 3D protein structure. Visualizations created with **`dms-viz`** are intended to be _flexible_, _customizable_, and _shareable_.
 
 ::: tip Ready to use the tool?
 You can skip to the [Quickstart](/getting-started.md) to learn how to prepare your own data, or you can see what the visualization tool looks like [here](https://dms-viz.github.io/).
@@ -8,29 +8,37 @@ You can skip to the [Quickstart](/getting-started.md) to learn how to prepare yo
 
 ## Purpose
 
-We believe that understanding the effects of mutations on a protein's structre, function, and evolutionary trajectory are an invaluable resource. This is particurly true in the field of infectious disease research. As high-throughput techniques like deep-mutational scanning (the 'dms' that gives this project it's name) and the volume of seqeucning surveillance have inceased, so has the wealth of information about the effects of mutations in proteins in a variety of contexts. More and more studies are using this kind of data to do everything from map escape from antibodies and serum on viral glycoprotiein, measure the effects of libraries of mutations on viral fitness, infer viral fitness from huge phylogenies, and learn how the effects of mutations change with epistasis.
+Understanding the repercussions of mutations on a protein's structure, function, and evolutionary trajectory is invaluable, especially in the realm of infectious disease research. The advancement of high-throughput techniques, such as deep-mutational scanning (_the 'DMS' which lends this project its name_), coupled with the expansion of viral surveillance sequencing, has massivley increased our access to data on the impacts of various mutations in proteins across different contexts. Increasingly, studies leverage this pool of data to accomplish a range of objectives, from mapping antibody and serum escape by viral glycoproteins \[[1]()\] to determining the influence of numerous mutations on viral fitness \[[2]()\], inferring viral fitness from extensive phylogenies \[[3]()\], and understanding the fluctuating effects of mutations as a result of epistasis \[[4]()\].
 
-We created **dms-viz** to be the sucessor of the awesome tool **dms-view**, which was the first of it's kind to streamline the workflow for mutation-level data by integrating summary statistics with 3D protein models. We wanted to update **dms-view** to make it more flexible to different kinds of input data, add customization in the form of filters and other maniputaions, and maintain the sharable links that made **dms-view** awesome, while additionally allowing you to use data private locally stored data.
+To further facilitate the analysis of mutation-level data, we have developed **`dms-viz`**, envisioned as the successor to the remarkable tool [**`dms-view`**](https://dms-view.github.io/). The latter pioneered the integration of summary visualizations with interactive 3D protein structures, streamlining the workflow for analyzing mutation-level data. Building on the strengths of **`dms-view`**, we aimed to create a tool that was _adaptable_ to various types of input data, offering enhanced _customization_ options through the addition of filters and other manipulations. Furthermore, we preserved the _shareable_ links that were a feature of dms-view, while also incorporating the functionality to utilize privately stored local data, enhancing both accessibility and privacy.
 
-## Why dms-viz?
+## Why use dms-viz?
 
 - **Flexible Inputs**
 
-Our command line tool makes it easy to format data from different sources into a single universal specification file. It also allows you to join in data from other locations, specify custom filters and tooltips, and checks for common mistakes.
+  Utilize our command-line tool, `configure-dms-viz`, to streamline data formatting effortlessly. It facilitates the integration of data from varied sources into a singular, universal `.JSON` specification file. Moreover, this tool makes it easy to incorporate additional datasets from different locations, stipulate custom filters and tooltips, and identify common errors.
 
 - **Customizable Visualizations**
 
-The visualization is highly customizable. Choose how to represent the protein structure. Include mutltiple conditions.
+  Experience unparalleled customization with your visualizations. You have the liberty to select the appearance of the protein structure, visualize multiple conditions per dataset, and extend functionalities with custom filters, tooltips, and beyond.
 
 - **Shareable URLs**
 
-If you data is hosted online (for example, in a GitHub repository), you can share a link that will automatically load up the view. The URL will also keep track of how you've configured the visualization.
+  Should your data be hosted online (like in a [GitHub](https://github.com/) repository), sharing becomes a breeze with URLs that can automatically load the visualizations. Moreover, these URLs retain the configuration settings of your visualization, enhancing the sharing experience. However, if you don't want to host your data online, you can still use **`dms-viz`** on your local files.
 
 ## Development
 
-This tool has two parts:
+**`dms-viz`** has two components:
 
-1. A command line interface (CLI) for formating data that was written in Python and is packaged and distributed with PyPI.
-2. A Javascript web-based visualization tool created primarily with the libaries D3.js for making the visualizations and NGL.js for visualizing interactive molecular structures with WebGL.
+1. A command line interface (CLI) for formating data that was written in `Python` using the [click](https://click.palletsprojects.com/en/8.1.x/) API.
+2. A web-based visualization tool written in 'vanilla' `Javascript` using primarily the libraries [D3.js](https://d3js.org/) for making the visualizations and [NGL.js](https://nglviewer.org/#page-top) for creating interactive molecular structures.
+
+If you're interested in contributing, check out the [Contributing Guide]() for details.
 
 ## Citation
+
+If you end up using **`dms-viz`** in your paper, please cite us!
+
+```md
+TODO: Add citation here
+```

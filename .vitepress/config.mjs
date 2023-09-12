@@ -45,25 +45,16 @@ export default defineConfig({
       },
       {
         text: "Preparing Data",
-        items: [
-          { text: "Tutorial" },
-          { text: "Command Line Interface" },
-          { text: "Examples" },
-        ],
+        items: [{ text: "Data Requirements" }, { text: "Command Line API" }],
       },
       {
         text: "Visualizing Data",
-        items: [
-          { text: "Tutorial" },
-          { text: "Features" },
-          { text: "Examples" },
-        ],
+        items: [{ text: "Features" }, { text: "Examples" }],
       },
       {
         text: "Project Info",
         items: [
-          { text: "Changelog" },
-          { text: "Contributing" },
+          { text: "Developing" },
           { text: "Manuscript" },
           { text: "Contact" },
         ],

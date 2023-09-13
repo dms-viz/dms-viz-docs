@@ -2,7 +2,7 @@
 
 ## Overview
 
-Using **`dms-viz`** involves two steps. First, using a command line tool called [`configure-dms-viz`](https://pypi.org/project/configure-dms-viz/), you specifcy some information about your dataset to generate a `.JSON` format specification file. Second, you open up the [web-based tool](https://dms-viz.github.io/) and upload your specification file to generate a visualization. Below are some quickstart instructions to get you oriented.
+Using **`dms-viz`** involves two steps. First, using a command line tool called [`configure-dms-viz`](https://pypi.org/project/configure-dms-viz/), you specifcy some information about your dataset to generate a `.json` format specification file. Second, you open up the [web-based tool](https://dms-viz.github.io/) and upload your specification file to generate a visualization. Below are some quickstart instructions to get you oriented.
 
 ::: tip Want to Skip Ahead?
 If you're insterested in the detailed command line API, check out the reference [here](). If you've already formatted your data and you're ready to start visualizing it, check out the instructions for that [here]().
@@ -46,7 +46,7 @@ You should see the help message for the tool printed to the terminal.
 
 ## Basic Usage
 
-`configure_dms_viz` is a command-line tool designed to create a `.JSON` format specification file for [`dms-viz`](https://dms-viz.github.io/). You provide the data that you'd like to visualize along with additional information to customize the analysis. The resulting specification file can be uploaded to `dms-viz` for interactive visualization of your data. Below is an overview of the process of using `configure_dms_viz`.
+`configure_dms_viz` is a command-line tool designed to create a `.json` format specification file for [`dms-viz`](https://dms-viz.github.io/). You provide the data that you'd like to visualize along with additional information to customize the analysis. The resulting specification file can be uploaded to `dms-viz` for interactive visualization of your data. Below is an overview of the process of using `configure_dms_viz`.
 
 ::: tip Looking for more details?
 For a detailed explaination of the features of `configure_dms_viz` as well as the command line API check out the reference [here]().
@@ -72,7 +72,7 @@ The information that is required to make a visualization file for **`dms-viz`** 
 3. `--metric`: The name of the column that contains [the metric]() you want to visualize.
 4. `--structure`: The [protein structure]() that you want to use as a model.
 5. `--sitemap`: [A map of the sites]() in your data to the sites in the reference and protein.
-6. `--output`: The file path of [the output]() `.JSON` file.
+6. `--output`: The file path of [the output]() `.json` file.
 
 The remaining arguments are all _optional_ and configure the look and interaction of your final visualization. For more details on the individual arguments, check out the [API reference]().
 
@@ -118,10 +118,10 @@ Warning: duplicate column names exist between mutation dataframe and join datafr
 About 85.76% of the wildtype residues in the data match the corresponding residues in the structure.
 About 11.96% of the data sites are missing from the structure.
 
-Success! The visualization JSON was written to 'tests/sars2/output/LyCoV-1404.json'
+Success! The visualization json was written to 'tests/sars2/output/LyCoV-1404.json'
 ```
 
-This message provides some information about the `configure-dms-viz` run on your dataset. In addition to this message, there should be a `.JSON` file located where you specified the output path ([`tests/sars2/output/LyCoV-1404.json`](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/output/LyCoV-1404.json)). In the next section, you'll take this `.JSON` visualization file and visualize your data with [**`dms-viz`**](https://dms-viz.github.io/).
+This message provides some information about the `configure-dms-viz` run on your dataset. In addition to this message, there should be a `.json` file located where you specified the output path ([`tests/sars2/output/LyCoV-1404.json`](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/output/LyCoV-1404.json)). In the next section, you'll take this `.json` visualization file and visualize your data with [**`dms-viz`**](https://dms-viz.github.io/).
 
 ## Visualizing
 
@@ -135,17 +135,17 @@ To upload a local file, you simply click on the `Upload Data` section and choose
   <img src="/local-upload-example.png" alt="Local Upload" />
 </div>
 
-Since the `.JSON` file created above should now be stored locally on your machine, you can upload this file using this approach.
+Since the `.json` file created above should now be stored locally on your machine, you can upload this file using this approach.
 
 ### Remote
 
-Alternativley, if your raw `.JSON` file is hosted somewhere online – like on GitHub, for example – you can provide the link to this file by clicking on the `Remote` button under the `Upload Data` section.
+Alternativley, if your raw `.json` file is hosted somewhere online – like on GitHub, for example – you can provide the link to this file by clicking on the `Remote` button under the `Upload Data` section.
 
 <div align="center">
   <img src="/remote-upload-example.png" alt="Remote Upload" />
 </div>
 
-You can try yourself by posting the following link into the URL text box:
+You can try yourself by pasting the following link into the URL text box:
 
 ```md
 https://raw.githubusercontent.com/dms-viz/configure_dms_viz/main/tests/sars2/output/sars2.json

@@ -16,7 +16,7 @@ To further facilitate the analysis of mutation-level data, we have developed **`
 
 - **Flexible Inputs**
 
-  Utilize our command-line tool, `configure-dms-viz`, to streamline data formatting effortlessly. It facilitates the integration of data from varied sources into a singular, universal `.JSON` specification file. Moreover, this tool makes it easy to incorporate additional datasets from different locations, stipulate custom filters and tooltips, and identify common errors.
+  Utilize our command-line tool, `configure-dms-viz`, to streamline data formatting effortlessly. It facilitates the integration of data from varied sources into a singular, universal `.json` specification file. Moreover, this tool makes it easy to incorporate additional datasets from different locations, stipulate custom filters and tooltips, and identify common errors.
 
 - **Customizable Visualizations**
 

@@ -52,7 +52,10 @@ export default defineConfig({
       },
       {
         text: "Visualizing Data",
-        items: [{ text: "Features" }, { text: "Examples" }],
+        items: [
+          { text: "Web Tool API", link: "/web-tool-api" },
+          { text: "Vignettes", link: "/vignettes" },
+        ],
       },
       {
         text: "Project Info",

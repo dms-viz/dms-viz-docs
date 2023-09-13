@@ -103,46 +103,70 @@ For each of these separate compnents, there are options to change the following:
 
 ## Interaction
 
-### Chart
+There are a multitude of ways to interact with **`dms-viz`**. Below, you'll find some examples of what this interaction can look like.
 
-There are multiple ways to interact with the visualization.
+### Chart
 
 You can **zoom** in and out of regions of your data by **brushing** (_click and drag_) over the area plot.
 
-You can **select sites** to see in the **heatmap** by **clicking** on points in the line/point plot.
+<video controls="controls" name="Zoom Example">
+  <source src="/zoom-on-lineplot.mov">
+</video>
 
-You can **mouseover** sites on the line/point and mutations on the heatmap to see details in a pop-up **tooltip**.
+You can **mouseover** sites on the line/point and mutations on the heatmap to see details in a pop-up **tooltip** and you can **select sites** to see in the **heatmap** by **clicking** on points in the line/point plot.
+
+<video controls="controls" name="Heatmap Example">
+  <source src="/select-on-heatmap.mov">
+</video>
 
 You can **select sites on the protein** structure by **brushing** (_click and drag_) over points in the line/point plot.
 
+<video controls="controls" name="Selection Example">
+  <source src="/select-on-protein.mov">
+</video>
+
 To **deselect sites**, you can either **double-click** on the line/point plot or **hold down the option key ⌥ and brush** over the sites that you want to deselect.
+
+<video controls="controls" name="Deselection Example">
+  <source src="/deselect-sites-on-protein.mov">
+</video>
 
 If there is more than one condition in your data, an interactive legend will appear in the `Chart Options` You can **select a condition** to color the protein structure with by **clicking** on an condition in the legend.
 
-You can **remove or add conditions** to the line/point plot by **holding down the option key ⌥ while clicking**.
+<video controls="controls" name="Protein Condition Example">
+  <source src="/select-conditions-on-protein.mov">
+</video>
+
+Finally, you can **remove or add conditions** to the line/point plot by **holding down the option key ⌥ while clicking**.
+
+<video controls="controls" name="Chart Condition Example">
+  <source src="/select-conditions-on-chart.mov">
+</video>
 
 ### Protein
 
-You can **reorient and zoom** into the protein structure by **clicking and dragging** it around the window.
+You can **reorient and zoom** into the protein structure by **clicking and dragging** it around the window. You can also **reset the protein structure** to its original orientation by pressing the **`R` button** on your keyboard.
 
-You can also **reset the protein structure** to its original orientation by pressing the **`R` button** on your keyboard.
+<video controls="controls" name="Protein Interaction">
+  <source src="/protein-interaction.mov">
+</video>
 
 ## Sharing
 
 The visualizations that you create with **`dms-viz`** can be shared with collaborators and in manuscripts. There are three ways to go about this:
 
-### 1. Share the `.json` files
+### 1. Share the `.json` file
 
 You can simply share the `.json` specifications that you create with `configure-dms-viz`.
 
-### 2. Share the URL links
-
-If you data is hosted on a remote server like `GitHub`, you can copy the link from your session.
-
-### 3. Share static images
+### 2. Share static images
 
 If you're only interested in a particular plot or the protein, you can save and download `.png` images. Under the `Download Session` tab in the sidemenu, you'll see buttons to download an image of both the plot and the protien.
 
 <div align="center">
   <img src="/download-options.png" alt="Download Options" />
 </div>
+
+### 3. Share the URL links
+
+If you data is hosted on a remote server like `GitHub`, you can copy the link from your session. This link keeps track of your data, an _optional_ description, and all of the configuration options that you've selected.

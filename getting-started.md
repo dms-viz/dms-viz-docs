@@ -46,7 +46,7 @@ You should see the help message for the tool printed to the terminal.
 
 ## Basic Usage
 
-`configure_dms_viz` is a command-line tool designed to create a `.JSON` format specification file for [`dms-viz`](https://dms-viz.github.io/). You provide the data that you'd like to visualize along with additional information to customize the analysis. The resulting specification file can be uploaded to `dms-viz` for interactive analysis of your data. Below is an overview of the process of using `configure_dms_viz`.
+`configure_dms_viz` is a command-line tool designed to create a `.JSON` format specification file for [`dms-viz`](https://dms-viz.github.io/). You provide the data that you'd like to visualize along with additional information to customize the analysis. The resulting specification file can be uploaded to `dms-viz` for interactive visualization of your data. Below is an overview of the process of using `configure_dms_viz`.
 
 ::: tip Looking for more details?
 For a detailed explaination of the features of `configure_dms_viz` as well as the command line API check out the reference [here]().
@@ -80,7 +80,7 @@ The remaining arguments are all _optional_ and configure the look and interactio
 If you plan to use `configure-dms-viz` right away, it's crucial to make sure that your data meets some initial requirements. Please check out what these requirements are [here]().
 :::
 
-Using the format of the command outlined above, let's use some example data. This example data is included in the GitHub repository if you want to follow along.
+Now, let's use `configure-dms-viz` on some example data. This data is included in the [GitHub repository](https://github.com/dms-viz/configure_dms_viz/tree/main). If you want to follow along, clone the repository and run `configure-dms-viz` from the top of the directory.
 
 **Input**
 
@@ -98,7 +98,7 @@ configure-dms-viz \
    --tooltip-cols "{'times_seen': '# Obsv', 'effect': 'Func Eff.'}"
 ```
 
-Here, we've specified that we want the dataset to be called `LyCoV-1404` and we've pointed to file location of the [input data](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/escape/LyCoV-1404_avg.csv) and [sitemap](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/site_numbering_map.csv). In addition, we've specified that we want to use the structure `6xr8` from the [RSCB PDB](https://www.rcsb.org/) and we want to visualize the `escape_mean` column of the input dataset. We've also specified some _optional_ arguments including [additional data](), [filters](), [tooltips](), and the [name]() we want to show up for the metric we're visualizing.
+Here, we've specified that we want the dataset to be called `LyCoV-1404` and we've pointed to file location of the [input data](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/escape/LyCoV-1404_avg.csv) and [sitemap](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/site_numbering_map.csv). In addition, we've specified that we want to use the protein structure `6xr8` from the [RSCB PDB](https://www.rcsb.org/) and that we want to visualize the `escape_mean` column of the input dataset. We've also specified some _optional_ arguments including [additional data](), [filters](), [tooltips](), and the [name]() we want to show up for the metric we're visualizing.
 
 The result of this command should be a message printed to the terminal that looks like this:
 
@@ -121,6 +121,34 @@ About 11.96% of the data sites are missing from the structure.
 Success! The visualization JSON was written to 'tests/sars2/output/LyCoV-1404.json'
 ```
 
-This message provides information about the tool's run. In addition to this message, there should be a `.JSON` file located where you specified the output path ([`tests/sars2/output/LyCoV-1404.json`](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/output/LyCoV-1404.json)). In the next section, you'll take this `.JSON` visualization file and visualize your data with [**`dms-viz`**](https://dms-viz.github.io/).
+This message provides some information about the `configure-dms-viz` run on your dataset. In addition to this message, there should be a `.JSON` file located where you specified the output path ([`tests/sars2/output/LyCoV-1404.json`](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/output/LyCoV-1404.json)). In the next section, you'll take this `.JSON` visualization file and visualize your data with [**`dms-viz`**](https://dms-viz.github.io/).
 
 ## Visualizing
+
+There are two ways to upload data into **`dms-viz`**. You can either upload a **local** specification file from your computer, or you can provide a link to a **remote** specification file hosted somewhere like [GitHub](https://github.com/).
+
+### Local
+
+To upload a local file, you simply click on the `Upload Data` section and choose a file from your machine.
+
+<div align="center">
+  <img src="/local-upload-example.png" alt="Local Upload" />
+</div>
+
+Since the `.JSON` file created above should now be stored locally on your machine, you can upload this file using this approach.
+
+### Remote
+
+Alternativley, if your raw `.JSON` file is hosted somewhere online – like on GitHub, for example – you can provide the link to this file by clicking on the `Remote` button under the `Upload Data` section.
+
+<div align="center">
+  <img src="/remote-upload-example.png" alt="Remote Upload" />
+</div>
+
+You can try yourself by posting the following link into the URL text box:
+
+```md
+https://raw.githubusercontent.com/dms-viz/configure_dms_viz/main/tests/sars2/output/sars2.json
+```
+
+This approach has some advantages. For example, after providing a link to your data, this link is saved in the URL, allowing you to share a view of **`dms-viz`** with the data pre-loaded and ready to view. Also, this approach allows you to proivde a markdown description (also hosted remotely) of the datasets. For more details on using the web-based portion of **`dms-viz`** including hosting, interacting, and sharing your files, check out the [interaction reference]().

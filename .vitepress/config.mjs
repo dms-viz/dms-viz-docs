@@ -45,7 +45,10 @@ export default defineConfig({
       },
       {
         text: "Preparing Data",
-        items: [{ text: "Data Requirements" }, { text: "Command Line API" }],
+        items: [
+          { text: "Data Requirements", link: "/data-requirements" },
+          { text: "Command Line API", link: "/command-line-api" },
+        ],
       },
       {
         text: "Visualizing Data",

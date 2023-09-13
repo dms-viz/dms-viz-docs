@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Getting Started
-      link: /what-is-dms-viz
+      link: /getting-started
     - theme: alt
       text: Vignettes
       link: https://dms-viz.github.io/

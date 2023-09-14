@@ -11,7 +11,7 @@ export default defineConfig({
     // Configure Navigation Bar
     nav: [
       { text: "Home", link: "/" },
-      { text: "Guide", link: "/what-is-dms-viz" },
+      { text: "Guide", link: "/introduction/what-is-dms-viz/" },
       {
         text: "Changelog",
         items: [
@@ -39,29 +39,38 @@ export default defineConfig({
       {
         text: "Introduction",
         items: [
-          { text: "What is dms-viz?", link: "/what-is-dms-viz" },
-          { text: "Getting Started", link: "/getting-started" },
+          { text: "What is dms-viz?", link: "/introduction/what-is-dms-viz/" },
+          { text: "Getting Started", link: "/introduction/getting-started/" },
         ],
       },
       {
         text: "Preparing Data",
+        collapsed: true,
         items: [
-          { text: "Data Requirements", link: "/data-requirements" },
-          { text: "Command Line API", link: "/command-line-api" },
+          {
+            text: "Data Requirements",
+            link: "/preparing-data/data-requirements/",
+          },
+          {
+            text: "Command Line API",
+            link: "/preparing-data/command-line-api/",
+          },
         ],
       },
       {
         text: "Visualizing Data",
+        collapsed: true,
         items: [
-          { text: "Web Tool API", link: "/web-tool-api" },
-          { text: "Vignettes", link: "/vignettes" },
+          { text: "Web Tool API", link: "/visualizing-data/web-tool-api/" },
+          { text: "Vignettes", link: "/visualizing-data/vignettes/" },
         ],
       },
       {
         text: "Project Info",
+        collapsed: true,
         items: [
-          { text: "Contributing", link: "/contributing-guide" },
-          { text: "Contact", link: "/contact-info" },
+          { text: "Contributing", link: "/project-info/contributing-guide/" },
+          { text: "Contact", link: "/project-info/contact-info/" },
         ],
       },
     ],

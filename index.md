@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Getting Started
-      link: /getting-started
+      link: /introduction/getting-started/
     - theme: alt
       text: Vignettes
-      link: /vignettes
+      link: /visualizing-data/vignettes/
     - theme: alt
       text: Manuscript
       link: https://joss.theoj.org/

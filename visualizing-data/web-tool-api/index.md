@@ -30,7 +30,7 @@ This approach has some advantages. For example, after providing a link to your d
 
 #### Providing A Description
 
-If you've uploaded data that's stored on a server like GitHub by following the [Remote instructions](), you can _optionally_ provide a link to a markdown (`.md`) file that will be displayed below the main visualization in a collapsible container.
+If you've uploaded data that's stored on a server like GitHub by following the [Remote instructions](#remote), you can _optionally_ provide a link to a markdown (`.md`) file that will be displayed below the main visualization in a collapsible container.
 
 <div align="center">
   <img src="/markdown-description.png" alt="Markdown Description" />
@@ -48,15 +48,15 @@ Just like the remote `.json` specification, the link to the markdown is saved in
 
 - ### `Dataset`
 
-  Although `configure-dms-viz` will return only a single `.json` specification, it is possible to combine multiple `.json` specification in a single file to visualize. If there are multiple datasets in the `.json` file, you can navigate between these using the `Dataset` dropdown menu. The name that appears in the dropdown for each dataset depends on the [`--name`]() flag.
+  Although `configure-dms-viz` will return only a single `.json` specification, it is possible to combine multiple `.json` specification in a single file to visualize. If there are multiple datasets in the `.json` file, you can navigate between these using the `Dataset` dropdown menu. The name that appears in the dropdown for each dataset depends on the [`--name`](/preparing-data/command-line-api/#name) flag.
 
-  Additionally, next to the `Dataset` dropdown menu there is an information icon ⓘ. By clicking on this icon, a short description of the dataset appears above the top plot. The description can be specified using the [`--description`]() flag.
+  Additionally, next to the `Dataset` dropdown menu there is an information icon ⓘ. By clicking on this icon, a short description of the dataset appears above the top plot. The description can be specified using the [`--description`](/preparing-data/command-line-api/#description) flag.
 
 - ### `Condition`
 
-  If your input data has multiple measurements per mutation/site combination that are distinguished by some _condition_ (specified by the [`--condition`]() flag), an interactive legend appears under `Chart Options`.
+  If your input data has multiple measurements per mutation/site combination that are distinguished by some _condition_ (specified by the [`--condition`](/preparing-data/command-line-api/#condition) flag), an interactive legend appears under `Chart Options`.
 
-  Although the default label that appears above the legend is `Condition`, you can specify the label using the [`--conditon_name`]() flag.
+  Although the default label that appears above the legend is `Condition`, you can specify the label using the [`--conditon_name`](/preparing-data/command-line-api/#condition_name) flag.
 
 - ### `Summary Metric`
 
@@ -80,12 +80,12 @@ Just like the remote `.json` specification, the link to the markdown is saved in
 
 There are _four_ components of the protein structure whose appearances can be controlled separately. For each of these separate components, you can alter the color, representation, and opacity.
 
-| Component    | Description                                                                                                                                              |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Protein`    | All 'polymer' chains in the protein structure that have corresponding data (included in the [`--data-chains`]() flag).                                   |
-| `Selection`  | The residues in `Protein` that have been selected by the user.                                                                                           |
-| `Peripheral` | The chains that are aren't excluded (by the [`--exclude-chains`]() flag) but don't have corresponding data (aren't included in the [`--data-chains`]()). |
-| `Ligand`     | If [`Show Ligands`]() is checked, the ligands (i.e. glycans, small molecules, etc...) in the structure.                                                  |
+| Component    | Description                                                                                                                                                                                                                                                    |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Protein`    | All 'polymer' chains in the protein structure that have corresponding data (included in the [`--included-chains`](/preparing-data/command-line-api/#included-chains) flag).                                                                                    |
+| `Selection`  | The residues in `Protein` that have been selected by the user.                                                                                                                                                                                                 |
+| `Peripheral` | The chains that are aren't excluded (by the [`--exclude-chains`](/preparing-data/command-line-api/#exclude-chains) flag) but don't have corresponding data (aren't included in the [`--included-chainss`](/preparing-data/command-line-api/#included-chains)). |
+| `Ligand`     | If `Show Ligands` is checked, the ligands (i.e. glycans, small molecules, etc...) in the structure.                                                                                                                                                            |
 
 For each of these separate compnents, there are options to change the following:
 

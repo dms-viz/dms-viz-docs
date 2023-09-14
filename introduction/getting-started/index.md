@@ -5,7 +5,7 @@
 Using **`dms-viz`** involves two steps. First, using a command line tool called [`configure-dms-viz`](https://pypi.org/project/configure-dms-viz/), you specifcy some information about your dataset to generate a `.json` format specification file. Second, you open up the [web-based tool](https://dms-viz.github.io/) and upload your specification file to generate a visualization. Below are some quickstart instructions to get you oriented.
 
 ::: tip Want to Skip Ahead?
-If you're insterested in the detailed command line API, check out the reference [here](). If you've already formatted your data and you're ready to start visualizing it, check out the instructions for that [here]().
+If you're insterested in the detailed command line API, check out the reference [here](/preparing-data/command-line-api/). If you've already formatted your data and you're ready to start visualizing it, check out the instructions for that [here](/visualizing-data/web-tool-api/).
 :::
 
 ## Prerequsites
@@ -46,10 +46,10 @@ You should see the help message for the tool printed to the terminal.
 
 ## Basic Usage
 
-`configure_dms_viz` is a command-line tool designed to create a `.json` format specification file for [`dms-viz`](https://dms-viz.github.io/). You provide the data that you'd like to visualize along with additional information to customize the analysis. The resulting specification file can be uploaded to `dms-viz` for interactive visualization of your data. Below is an overview of the process of using `configure_dms_viz`.
+`configure_dms_viz` is a command-line tool designed to create a `.json` format specification file for **`dms-viz`**. You provide the data that you'd like to visualize along with additional information to customize the analysis. The resulting specification file can be uploaded to [**`dms-viz`**](https://dms-viz.github.io/) for interactive visualization of your data. Below is an overview of the process of using `configure_dms_viz`.
 
 ::: tip Looking for more details?
-For a detailed explaination of the features of `configure_dms_viz` as well as the command line API check out the reference [here]().
+For a detailed explaination of the features of `configure_dms_viz` as well as the command line API check out the reference [here](/preparing-data/command-line-api/).
 :::
 
 To format your data, you execute the `configure-dms-viz` command with the required and optional arguments as needed:
@@ -67,17 +67,17 @@ configure-dms-viz \
 
 The information that is required to make a visualization file for **`dms-viz`** is as follows:
 
-1. `--name`: The [name of your dataset]() as you'd like it to appear in the visualization.
-2. `--input`: The file path to your [input data]().
-3. `--metric`: The name of the column that contains [the metric]() you want to visualize.
-4. `--structure`: The [protein structure]() that you want to use as a model.
-5. `--sitemap`: [A map of the sites]() in your data to the sites in the reference and protein.
-6. `--output`: The file path of [the output]() `.json` file.
+1. `--name`: The [name of your dataset](/preparing-data/command-line-api/#name) as you'd like it to appear in the visualization.
+2. `--input`: The file path to your [input data](/preparing-data/command-line-api/#input).
+3. `--metric`: The name of the column that contains [the metric](/preparing-data/command-line-api/#metric) you want to visualize.
+4. `--structure`: The [protein structure](/preparing-data/command-line-api/#structure) that you want to use as a model.
+5. `--sitemap`: [A map of the sites](/preparing-data/command-line-api/#sitemap) in your data to the sites in the reference and protein.
+6. `--output`: The file path of [the output](/preparing-data/command-line-api/#output) `.json` file.
 
-The remaining arguments are all _optional_ and configure the look and interaction of your final visualization. For more details on the individual arguments, check out the [API reference]().
+The remaining arguments are all _optional_ and configure the look and interaction of your final visualization. For more details on the individual arguments, check out the [API reference](/preparing-data/command-line-api/).
 
 ::: warning Before going any further
-If you plan to use `configure-dms-viz` right away, it's crucial to make sure that your data meets some initial requirements. Please check out what these requirements are [here]().
+If you plan to use `configure-dms-viz` right away, it's crucial to make sure that your data meets some initial requirements. Please check out what these requirements are [here](/preparing-data/data-requirements/).
 :::
 
 Now, let's use `configure-dms-viz` on some example data. This data is included in the [GitHub repository](https://github.com/dms-viz/configure_dms_viz/tree/main). If you want to follow along, clone the repository and run `configure-dms-viz` from the top of the directory.
@@ -98,7 +98,7 @@ configure-dms-viz \
    --tooltip-cols "{'times_seen': '# Obsv', 'effect': 'Func Eff.'}"
 ```
 
-Here, we've specified that we want the dataset to be called `LyCoV-1404` and we've pointed to file location of the [input data](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/escape/LyCoV-1404_avg.csv) and [sitemap](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/site_numbering_map.csv). In addition, we've specified that we want to use the protein structure `6xr8` from the [RSCB PDB](https://www.rcsb.org/) and that we want to visualize the `escape_mean` column of the input dataset. We've also specified some _optional_ arguments including [additional data](), [filters](), [tooltips](), and the [name]() we want to show up for the metric we're visualizing.
+Here, we've specified that we want the dataset to be called `LyCoV-1404` and we've pointed to file location of the [input data](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/escape/LyCoV-1404_avg.csv) and [sitemap](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/site_numbering_map.csv). In addition, we've specified that we want to use the protein structure `6xr8` from the [RSCB PDB](https://www.rcsb.org/) and that we want to visualize the `escape_mean` column of the input dataset. We've also specified some _optional_ arguments including [additional data](/preparing-data/command-line-api/#join-data), [filters](/preparing-data/command-line-api/#filter-cols), [tooltips](/preparing-data/command-line-api/#tooltip-cols), and the [name](/preparing-data/command-line-api/#name) we want to show up for the metric we're visualizing.
 
 The result of this command should be a message printed to the terminal that looks like this:
 
@@ -151,4 +151,4 @@ You can try yourself by pasting the following link into the URL text box:
 https://raw.githubusercontent.com/dms-viz/configure_dms_viz/main/tests/sars2/output/sars2.json
 ```
 
-This approach has some advantages. For example, after providing a link to your data, this link is saved in the URL, allowing you to share a view of **`dms-viz`** with the data pre-loaded and ready to view. Also, this approach allows you to proivde a markdown description (also hosted remotely) of the datasets. For more details on using the web-based portion of **`dms-viz`** including hosting, interacting, and sharing your files, check out the [interaction reference]().
+This approach has some advantages. For example, after providing a link to your data, this link is saved in the URL, allowing you to share a view of **`dms-viz`** with the data pre-loaded and ready to view. Also, this approach allows you to proivde a markdown description (also hosted remotely) of the datasets. For more details on using the web-based portion of **`dms-viz`** including hosting, interacting, and sharing your files, check out the [interaction reference](/visualizing-data/web-tool-api/).

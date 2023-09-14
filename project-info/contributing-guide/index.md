@@ -2,11 +2,11 @@
 
 Welcome to the `dms-viz` project! [dms-viz](https://dms-viz.github.io/) is an interactive tool for visualizing mutation-level data in the context of a 3D protein structure. The tool consists of two parts:
 
-1. A [Command Line Interface (CLI)]() written in Python used to format data into a `.json` file that can be uploaded
+1. A [Command Line Interface (CLI)](https://github.com/dms-viz/configure_dms_viz) written in Python used to format data into a `.json` file that can be uploaded
    to
-2. An [interactive web-based visualization]() tool written with Javascript, [D3.js](), and [NGL.js]().
+2. An [interactive web-based visualization](https://github.com/dms-viz/dms-viz.github.io) tool written with Javascript, [D3.js](https://d3js.org/), and [NGL.js](https://nglviewer.org/).
 
-Because this project is broken into two separate components, each in their own repositories, this contributing/developing guide is split into two parts.
+Because this project is built in two separate components, each in their own repositories, this contributing/developing guide is split into two parts.
 
 If you're intersted in contributing to this project, please reach out on [GitHub](https://github.com/dms-viz)!
 

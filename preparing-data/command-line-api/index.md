@@ -2,7 +2,7 @@
 
 ## Basic Usage
 
-`configure_dms_viz` is a command-line tool designed to create a `.JSON` format specification file for [`dms-viz`](https://dms-viz.github.io/). You provide the data that you'd like to visualize along with additional information to customize the analysis. The resulting specification file can be uploaded to `dms-viz` for interactive visualization of your data. Below is an overview of the process of using `configure_dms_viz`.
+`configure_dms_viz` is a command-line tool designed to create a `.JSON` format specification file for [**`dms-viz`**](https://dms-viz.github.io/). You provide the data that you'd like to visualize along with additional information to customize the analysis. The resulting specification file can be uploaded to **`dms-viz`** for interactive visualization of your data. Below is an overview of the process of using `configure_dms_viz`.
 
 To format your data, you execute the `configure-dms-viz` command with the required and optional arguments as needed:
 
@@ -23,7 +23,7 @@ configure-dms-viz \
 
   `<string>`
 
-  Path to a CSV file with site- and mutation-level data to visualize on a protein structure. [See details below](#input-data-format) for required columns and format.
+  Path to a CSV file with site- and mutation-level data to visualize on a protein structure. [See details here](/preparing-data/data-requirements/) for required columns and format.
 
 - ### `--name`
 
@@ -35,7 +35,7 @@ configure-dms-viz \
 
   `<string>`
 
-  Path to a CSV file containing a map between reference sites in the experiment and sequential sites. [See details below](#input-data-format) for required columns and format.
+  Path to a CSV file containing a map between reference sites in the experiment and sequential sites. [See details here](/preparing-data/data-requirements/) for required columns and format.
 
 - ### `--metric`
 
@@ -77,7 +77,7 @@ configure-dms-viz \
 
   `<list>`
 
-  A comma separated list of CSV file with data to join to the visualization data. This data can then be used in the visualization tooltips or filters. [See details below](#input-data-format) for formatting requirements.
+  A comma separated list of CSV file with data to join to the visualization data. This data can then be used in the visualization tooltips or filters. [See details here](/preparing-data/data-requirements/) for formatting requirements.
 
 - ### `--tooltip-cols`
 

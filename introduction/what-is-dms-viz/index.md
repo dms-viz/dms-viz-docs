@@ -3,7 +3,7 @@
 Hi there 👋, if you've got some mutation-level data that you want to view on an interactive 3D protein structure, you're in the right place! **`dms-viz`** is a suite of tools that help you take quantitative data associated with mutations to a protein and analyze that data using intutive visual summaries in the context of a 3D protein structure. Visualizations created with **`dms-viz`** are intended to be _flexible_, _customizable_, and _shareable_.
 
 ::: tip Ready to use the tool?
-You can skip to the [Quickstart](/getting-started.md) to learn how to prepare your own data, or you can see what the visualization tool looks like [here](https://dms-viz.github.io/).
+You can skip to the [Quickstart](/introduction/getting-started/) to learn how to prepare your own data, or you can see what the visualization tool looks like [here](https://dms-viz.github.io/).
 :::
 
 ## Purpose
@@ -33,7 +33,7 @@ To further facilitate the analysis of mutation-level data, we have developed **`
 1. A command line interface (CLI) for formating data that was written in `Python` using the [click](https://click.palletsprojects.com/en/8.1.x/) API.
 2. A web-based visualization tool written in 'vanilla' `Javascript` using primarily the libraries [D3.js](https://d3js.org/) for making the visualizations and [NGL.js](https://nglviewer.org/#page-top) for creating interactive molecular structures.
 
-If you're interested in contributing, check out the [Contributing Guide]() for details.
+If you're interested in contributing, check out the [Contributing Guide](/project-info/contributing-guide/) for details.
 
 ## Citation
 

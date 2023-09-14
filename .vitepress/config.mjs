@@ -60,9 +60,8 @@ export default defineConfig({
       {
         text: "Project Info",
         items: [
-          { text: "Developing" },
-          { text: "Manuscript" },
-          { text: "Contact" },
+          { text: "Contributing", link: "/contributing-guide" },
+          { text: "Contact", link: "/contact-info" },
         ],
       },
     ],

@@ -12,7 +12,7 @@ hero:
       link: /getting-started
     - theme: alt
       text: Vignettes
-      link: https://dms-viz.github.io/
+      link: /vignettes
     - theme: alt
       text: Manuscript
       link: https://joss.theoj.org/

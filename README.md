@@ -29,4 +29,4 @@ Now, you should be able to see the website built locally. Changes to the website
 
 ## Deploying
 
-The docs is hosted on GitHub pages via a specific `gh-pages` branch and builds are automated using a GitHub Actions via [this deployment script](/.github/workflows/deploy.yml).
+The docs is hosted on GitHub pages via a specific `gh-pages` branch and builds are automated using a GitHub Actions via [this deployment script](/.github/workflows/deploy.yml). The website will build on `pull requests` and `pushes` to the `main` branch.

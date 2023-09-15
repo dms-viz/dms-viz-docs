@@ -1,1 +1,0 @@
-import{_ as s,o as e,c as a,Q as o}from"./chunks/framework.9ad6f510.js";const u=JSON.parse('{"title":"dms-viz-docs","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","filePath":"README.md"}'),t={name:"README.md"},l=o("",13),n=[l];function p(i,c,r,d,h,g){return e(),a("div",null,n)}const y=s(t,[["render",p]]);export{u as __pageData,y as default};

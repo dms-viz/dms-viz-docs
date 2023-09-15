@@ -132,7 +132,7 @@ There are two ways to upload data into **`dms-viz`**. You can either upload a **
 To upload a local file, you simply click on the `Upload Data` section and choose a file from your machine.
 
 <div align="center">
-  <img src="/local-upload-example.png" alt="Local Upload" />
+  <img src="/assets//local-upload-example.png" alt="Local Upload" />
 </div>
 
 Since the `.json` file created above should now be stored locally on your machine, you can upload this file using this approach.
@@ -142,7 +142,7 @@ Since the `.json` file created above should now be stored locally on your machin
 Alternativley, if your raw `.json` file is hosted somewhere online – like on GitHub, for example – you can provide the link to this file by clicking on the `Remote` button under the `Upload Data` section.
 
 <div align="center">
-  <img src="/remote-upload-example.png" alt="Remote Upload" />
+  <img src="/assets/remote-upload-example.png" alt="Remote Upload" />
 </div>
 
 You can try yourself by pasting the following link into the URL text box:

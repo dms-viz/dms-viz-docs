@@ -9,7 +9,7 @@ There are two ways to upload data into **`dms-viz`**. You can either upload a **
 To upload a local file, you simply click on the `Upload Data` section and choose a file from your machine.
 
 <div align="center">
-  <img src="/local-upload-example.png" alt="Local Upload" />
+  <img src="/assets/local-upload-example.png" alt="Local Upload" />
 </div>
 
 ### Remote
@@ -17,7 +17,7 @@ To upload a local file, you simply click on the `Upload Data` section and choose
 Alternativley, if your raw `.json` file is hosted somewhere online – like on GitHub, for example – you can provide the link to this file by clicking on the `Remote` button under the `Upload Data` section.
 
 <div align="center">
-  <img src="/remote-upload-example.png" alt="Remote Upload" />
+  <img src="/assets/remote-upload-example.png" alt="Remote Upload" />
 </div>
 
 You can try yourself by pasting the following link into the URL text box:
@@ -33,7 +33,7 @@ This approach has some advantages. For example, after providing a link to your d
 If you've uploaded data that's stored on a server like GitHub by following the [Remote instructions](#remote), you can _optionally_ provide a link to a markdown (`.md`) file that will be displayed below the main visualization in a collapsible container.
 
 <div align="center">
-  <img src="/markdown-description.png" alt="Markdown Description" />
+  <img src="/assets/markdown-description.png" alt="Markdown Description" />
 </div>
 
 Just like the remote `.json` specification, the link to the markdown is saved in the URL path and the description will load automatically when someone accesses the updated URL.
@@ -43,7 +43,7 @@ Just like the remote `.json` specification, the link to the markdown is saved in
 **`dms-viz`** provides a handful of ways to navigate and customize the visualization. You can find these options under the `Chart Options` tab in the sidemenu.
 
 <div align="center">
-  <img src="/chart-options.png" alt="Chart Options" />
+  <img src="/assets/chart-options.png" alt="Chart Options" />
 </div>
 
 - ### `Dataset`
@@ -75,7 +75,7 @@ Just like the remote `.json` specification, the link to the markdown is saved in
 **`dms-viz`** provides a handful of ways to navigate and customize the 3D protein structure. You can find these options under the `Protein Configuration` tab in the sidemenu.
 
 <div align="center">
-  <img src="/protein-options.png" alt="Protein Options" />
+  <img src="/assets/protein-options.png" alt="Protein Options" />
 </div>
 
 There are _four_ components of the protein structure whose appearances can be controlled separately. For each of these separate components, you can alter the color, representation, and opacity.
@@ -110,37 +110,37 @@ There are a multitude of ways to interact with **`dms-viz`**. Below, you'll find
 You can **zoom** in and out of regions of your data by **brushing** (_click and drag_) over the area plot.
 
 <video controls="controls" name="Zoom Example">
-  <source src="/zoom-on-lineplot.mov">
+  <source src="/assets/zoom-on-lineplot.mov">
 </video>
 
 You can **mouseover** sites on the line/point and mutations on the heatmap to see details in a pop-up **tooltip** and you can **select sites** to see in the **heatmap** by **clicking** on points in the line/point plot.
 
 <video controls="controls" name="Heatmap Example">
-  <source src="/select-on-heatmap.mov">
+  <source src="/assets/select-on-heatmap.mov">
 </video>
 
 You can **select sites on the protein** structure by **brushing** (_click and drag_) over points in the line/point plot.
 
 <video controls="controls" name="Selection Example">
-  <source src="/select-on-protein.mov">
+  <source src="/assets/select-on-protein.mov">
 </video>
 
 To **deselect sites**, you can either **double-click** on the line/point plot or **hold down the option key ⌥ and brush** over the sites that you want to deselect.
 
 <video controls="controls" name="Deselection Example">
-  <source src="/deselect-sites-on-protein.mov">
+  <source src="/assets/deselect-sites-on-protein.mov">
 </video>
 
 If there is more than one condition in your data, an interactive legend will appear in the `Chart Options` You can **select a condition** to color the protein structure with by **clicking** on an condition in the legend.
 
 <video controls="controls" name="Protein Condition Example">
-  <source src="/select-conditions-on-protein.mov">
+  <source src="/assets/select-conditions-on-protein.mov">
 </video>
 
 Finally, you can **remove or add conditions** to the line/point plot by **holding down the option key ⌥ while clicking**.
 
 <video controls="controls" name="Chart Condition Example">
-  <source src="/select-conditions-on-chart.mov">
+  <source src="/assets/select-conditions-on-chart.mov">
 </video>
 
 ### Protein
@@ -148,7 +148,7 @@ Finally, you can **remove or add conditions** to the line/point plot by **holdin
 You can **reorient and zoom** into the protein structure by **clicking and dragging** it around the window. You can also **reset the protein structure** to its original orientation by pressing the **`R` button** on your keyboard.
 
 <video controls="controls" name="Protein Interaction">
-  <source src="/protein-interaction.mov">
+  <source src="/assets/protein-interaction.mov">
 </video>
 
 ## Sharing
@@ -164,7 +164,7 @@ You can simply share the `.json` specifications that you create with `configure-
 If you're only interested in a particular plot or the protein, you can save and download `.png` images. Under the `Download Session` tab in the sidemenu, you'll see buttons to download an image of both the plot and the protien.
 
 <div align="center">
-  <img src="/download-options.png" alt="Download Options" />
+  <img src="/assets/download-options.png" alt="Download Options" />
 </div>
 
 ### 3. Share the URL links

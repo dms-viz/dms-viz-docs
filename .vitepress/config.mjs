@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
+  base: "/dms-viz-docs/",
   lang: "en-US",
   title: "dms-viz",
   description: "Documentation for dms-viz.github.io",

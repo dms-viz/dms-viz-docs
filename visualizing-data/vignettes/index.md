@@ -64,12 +64,12 @@ def combine_jsons(input_files, output_file):
         json.dump(combined_data, f)
 ```
 
-Which results in the `.json` specification located [here](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/HIV-Envelope-BF520-DMS/output/HIV-Envelope-BF520-DMS.json). You can visualize this with **`dms-viz`** below, or you can [click here](https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FSARS2-Mutation-Fitness%2Foutput%2FSARS2-Mutation-Fitness.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FSARS2-Mutation-Fitness%2FREADME.md) to see the visualization on a separate page.
+Which results in the `.json` specification located [here](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/HIV-Envelope-BF520-DMS/output/HIV-Envelope-BF520-DMS.json). You can visualize this with **`dms-viz`** below, or you can [click here](https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FHIV-Envelope-BF520-DMS%2Foutput%2FHIV-Envelope-BF520-DMS.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FHIV-Envelope-BF520-DMS%2FREADME.md&e=IDC508&ce=%255B%25221%2522%252C%25222%2522%255D) to see the visualization on a separate page.
 
 <div style="text-align: center;">
 
 <iframe 
-  src="https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FHIV-Envelope-BF520-DMS%2Foutput%2FHIV-Envelope-BF520-DMS.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FHIV-Envelope-BF520-DMS%2FREADME.md" 
+  src="https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FHIV-Envelope-BF520-DMS%2Foutput%2FHIV-Envelope-BF520-DMS.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FHIV-Envelope-BF520-DMS%2FREADME.md&e=IDC508&ce=%255B%25221%2522%252C%25222%2522%255D" 
   width="100%" 
   height="600px" 
   style="border:0; margin: 0 auto; display: block; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
@@ -163,12 +163,12 @@ configure-dms-viz
   --description "Deep mutational scan of influenza virus A/WSN/1933(H1N1) PB1 RdRp subunit"
 ```
 
-This results in an output `.json` file that can be visualized in the **`dms-viz`** right away. You can visualize this with **`dms-viz`** below, or you can [click here](https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2Foutput%2FIAV-PB1-DMS.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2FREADME.md) to see the visualization on a separate page.
+This results in an output `.json` file that can be visualized in the **`dms-viz`** right away. You can visualize this with **`dms-viz`** below, or you can [click here](https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2Foutput%2FIAV-PB1-DMS.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2FREADME.md&n=true) to see the visualization on a separate page.
 
 <div style="text-align: center;">
 
 <iframe 
-  src="https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2Foutput%2FIAV-PB1-DMS.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2FREADME.md" 
+  src="https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2Foutput%2FIAV-PB1-DMS.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2FREADME.md&n=true" 
   width="100%" 
   height="600px" 
   style="border:0; margin: 0 auto; display: block; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">

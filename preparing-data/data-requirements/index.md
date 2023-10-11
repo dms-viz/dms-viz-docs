@@ -14,7 +14,9 @@ The input data must contain the following columns with **exactly** these names:
 
 - ### `site` or `reference_site`
 
-  This column should contain the **site** in the protein at which each measurement was made. This column can be numeric (i.e., `[1, 2, 3, 4]`) or it can contain strings (i.e., `[1, 2, 2a, 2b, 3]`). Additionally, the sites do not need to be continuous (i.e., `[1, 4, 5, 8]`). The numeric order of your sites will be specified in the [Sitemap](#sitemap). The sites in this column will be displayed on the x-axis of summary plots.
+  This column should contain the **site** in the protein at which each measurement was made. This column can be numeric (i.e., `[1, 2, 3, 4]`) or it can contain strings (i.e., `[1, 2, 2a, 2b, 3]`). Additionally, the sites do not need to be continuous (i.e., `[1, 4, 5, 8]`). The numeric order of your sites will be specified in the [Sitemap](#sitemap). The sites in this column will be displayed on the x-axis of summary plots. 
+  
+  For more detail on what we mean by 'reference_site', check out the [description in the sitemap](#reference-site).
 
 - ### `mutant`
 
@@ -50,7 +52,9 @@ The sitemap must be in `.csv` format. If your data is tabular but in another for
 
 - ### `reference_site`
 
-  This column **must** correspond to the `site` or `reference_site` column in your [input data](#input-data). If the [`protein_site`](#protein_site) isn't provided, this column is also assumed to correspond to the identity of the sites in the [protein structure](/preparing-data/command-line-api/#structure).
+  This column **must** correspond to the `site` or `reference_site` column in your [input data](#input-data). If the [`protein_site`](#protein-site) isn't provided, this column is also assumed to correspond to the identity of the sites in the [protein structure](/preparing-data/command-line-api/#structure)
+  
+  The `reference_site` refers to the labels that are applied to the sites on the x-axis of the plots. These can sometimes differ from the `sequential_site` ([described below](#sequential-site)); for example, the current SARS-CoV-2 Spike protein variants now have indels that cause the widely used Wuhan-Hu-1 'reference' numbering to differ from the sequential, numeric order of the data.
 
 - ### `sequential_site`
 

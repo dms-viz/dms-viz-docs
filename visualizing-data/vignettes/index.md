@@ -94,8 +94,8 @@ You can find the original mutation fitness data for this study [here](https://gi
 ```bash
 configure-dms-viz
   --input tests/SARS2-Mutation-Fitness/input/S_fitness.csv
-  --sitemap 	tests/SARS2-Mutation-Fitness/sitemap/S_sitemap.csv
-  --output 	tests/SARS2-Mutation-Fitness/sitemap/S.json
+  --sitemap tests/SARS2-Mutation-Fitness/sitemap/S_sitemap.csv
+  --output tests/SARS2-Mutation-Fitness/sitemap/S.json
   --name "S"
   --metric "fitness"
   --metric-name "Fitness"
@@ -103,17 +103,19 @@ configure-dms-viz
   --included-chains "polymer"
   --tooltip-cols "{'expected_count': 'Expected Count'}"
   --filter-cols "{'expected_count': 'Expected Count'}"
+  --filter-limits "{'expected_count': [0, 100]}"
   --title "S"
-  --exclude-amino-acids "*, -"
+  --alphabet "RKHDEQNSTYWFAILMVGPC*"
+  --exclude-amino-acids "*"
   --description "The Spike Glycoprotein. The Structure is has one RBD in the up position. [Structure: 6VYB]"
 ```
 
-This results in an output `.json` file that can be visualized in the **`dms-viz`** right away. However, if you want to visualize all 23 experiments together, it's possible to combine them together into a single `.json` file using the `combine_jsons()` command described in the [example above](#_1-mapping-the-neutralization-profile-of-antibodies-and-sera-against-hiv-envelope). This results in the `.json` specification located [here](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/SARS2-Mutation-Fitness/output/SARS2-Mutation-Fitness.json). You can visualize this with **`dms-viz`** below, or you can [click here](https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FSARS2-Mutation-Fitness%2Foutput%2FSARS2-Mutation-Fitness.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FSARS2-Mutation-Fitness%2FREADME.md) to see the visualization on a separate page.
+This results in an output `.json` file that can be visualized in the **`dms-viz`** right away. However, if you want to visualize all 23 experiments together, it's possible to combine them together into a single `.json` file using the `combine_jsons()` command described in the [example above](#_1-mapping-the-neutralization-profile-of-antibodies-and-sera-against-hiv-envelope). This results in the `.json` specification located [here](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/SARS2-Mutation-Fitness/output/SARS2-Mutation-Fitness.json). You can visualize this with **`dms-viz`** below, or you can [click here](https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FSARS2-Mutation-Fitness%2Foutput%2FSARS2-Mutation-Fitness.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FSARS2-Mutation-Fitness%2FREADME.md&s=mean&fi=%257B%2522expected_count%2522%253A10.060741%257D) to see the visualization on a separate page.
 
 <div style="text-align: center;">
 
 <iframe 
-  src="https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FSARS2-Mutation-Fitness%2Foutput%2FSARS2-Mutation-Fitness.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FSARS2-Mutation-Fitness%2FREADME.md" 
+  src="https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FSARS2-Mutation-Fitness%2Foutput%2FSARS2-Mutation-Fitness.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FSARS2-Mutation-Fitness%2FREADME.md&s=mean&fi=%257B%2522expected_count%2522%253A10.060741%257D" 
   width="100%" 
   height="600px" 
   style="border:0; margin: 0 auto; display: block; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
@@ -163,12 +165,12 @@ configure-dms-viz
   --description "Deep mutational scan of influenza virus A/WSN/1933(H1N1) PB1 RdRp subunit"
 ```
 
-This results in an output `.json` file that can be visualized in the **`dms-viz`** right away. You can visualize this with **`dms-viz`** below, or you can [click here](https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2Foutput%2FIAV-PB1-DMS.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2FREADME.md&n=true) to see the visualization on a separate page.
+This results in an output `.json` file that can be visualized in the **`dms-viz`** right away. You can visualize this with **`dms-viz`** below, or you can [click here](https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2Foutput%2FIAV-PB1-DMS.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2FREADME.md&n=true&s=mean) to see the visualization on a separate page.
 
 <div style="text-align: center;">
 
 <iframe 
-  src="https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2Foutput%2FIAV-PB1-DMS.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2FREADME.md&n=true" 
+  src="https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2Foutput%2FIAV-PB1-DMS.json&markdown=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-viz%2Fconfigure_dms_viz%2Fmain%2Ftests%2FIAV-PB1-DMS%2FREADME.md&n=true&s=mean" 
   width="100%" 
   height="600px" 
   style="border:0; margin: 0 auto; display: block; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">

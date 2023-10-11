@@ -93,9 +93,9 @@ configure-dms-viz \
 
 - ### `--filter-limits`
 
-  ` <dict>`
+  `<dict>`
 
-  A dictionary that establishes the range for each filter (i.e. `"{'effect': [min, max]), 'times_seen': [min, max]}"`).
+  A dictionary that establishes the range for each filter (i.e. `"{'effect': [min, max], 'times_seen': [min, max]}"`).
 
 - ### `--included-chains`
 
@@ -119,13 +119,13 @@ configure-dms-viz \
 
   `<list>`
 
-  A comma separated list of HEX format colors for representing different conditions, i.e. `"#0072B2, #CC79A7, #4C3549, #009E73"`.
+  A comma separated list (with no spaces) of HEX format colors for representing different conditions, i.e. `"#0072B2,#CC79A7,#4C3549,#009E73"`.
 
 - ### `--negative-colors`
 
   `<list>`
 
-  A comma separated list of HEX format colors for representing the negative end of the scale for different conditions, i.e. `"#0072B2, #CC79A7, #4C3549, #009E73"`. If not provided, the inverse of each color is automatically calculated.
+  A comma separated list (with no spaces) of HEX format colors for representing the negative end of the scale for different conditions, i.e. `"#0072B2,#CC79A7,#4C3549,#009E73"`. If not provided, the inverse of each color is automatically calculated.
 
 - ### `--check-pdb`
 
@@ -137,7 +137,7 @@ configure-dms-viz \
 
   `<list>`
 
-  A comma separated list of amino acids that shouldn't be used to calculate the summary statistics (i.e. "\*, -")
+  A comma separated list of amino acids that shouldn't be used to calculate the summary statistics (i.e. `"\*, -"`)
 
 - ### `--description`
 

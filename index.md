@@ -14,8 +14,8 @@ hero:
       text: Vignettes
       link: /visualizing-data/vignettes/
     - theme: alt
-      text: Manuscript
-      link: https://joss.theoj.org/
+      text: Use the Tool!
+      link: https://dms-viz.github.io/
 
 features:
   - title: Flexible Inputs

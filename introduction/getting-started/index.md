@@ -2,7 +2,7 @@
 
 ## Overview
 
-Using **`dms-viz`** involves two steps. First, using a command line tool called [`configure-dms-viz`](https://pypi.org/project/configure-dms-viz/), you specifcy some information about your dataset to generate a `.json` format specification file. Second, you open up the [web-based tool](https://dms-viz.github.io/) and upload your specification file to generate a visualization. Below are some quickstart instructions to get you oriented.
+Using **`dms-viz`** involves two steps. First, using a command line tool called [`configure-dms-viz`](https://pypi.org/project/configure-dms-viz/), you specifcy some information about your dataset to generate a `.json` format specification file. Second, you open up the [web-based tool](https://dms-viz.github.io/) and upload your specification file to generate an interactive visualization. Below are some quickstart instructions to get you oriented.
 
 ::: tip Want to Skip Ahead?
 If you're insterested in the detailed command line API, check out the reference [here](/preparing-data/command-line-api/). If you've already formatted your data and you're ready to start visualizing it, check out the instructions for that [here](/visualizing-data/web-tool-api/).
@@ -46,16 +46,16 @@ You should see the help message for the tool printed to the terminal.
 
 ## Basic Usage
 
-`configure_dms_viz` is a command-line tool designed to create a `.json` format specification file for **`dms-viz`**. You provide the data that you'd like to visualize along with additional information to customize the analysis. The resulting specification file can be uploaded to [**`dms-viz`**](https://dms-viz.github.io/) for interactive visualization of your data. Below is an overview of the process of using `configure_dms_viz`.
+`configure_dms_viz` is a command-line tool designed to create a `JSON` format specification file for **`dms-viz`**. You provide the data that you'd like to visualize along with additional information to customize the analysis. The resulting specification file can be uploaded to [**`dms-viz`**](https://dms-viz.github.io/) for interactive visualization of your data. Below is an overview of the process of using `configure_dms_viz`.
 
 ::: tip Looking for more details?
-For a detailed explaination of the features of `configure_dms_viz` as well as the command line API check out the reference [here](/preparing-data/command-line-api/).
+For a detailed explaination of the features of `configure_dms_viz` check out the reference [here](/preparing-data/command-line-api/).
 :::
 
-To format your data, you execute the `configure-dms-viz` command with the required and optional arguments as needed:
+`configure-dms-viz` has two commands, `format` and `join`. To format a single dataset for **`dms-viz`**, you execute the `configure-dms-viz format` command with the required and optional arguments as needed:
 
 ```bash
-configure-dms-viz \
+configure-dms-viz format \
     --name <experiment_name> \
     --input <input_csv> \
     --metric <metric_column> \
@@ -85,7 +85,7 @@ Now, let's use `configure-dms-viz` on some example data. This data is included i
 **Input**
 
 ```bash
-configure-dms-viz \
+configure-dms-viz format \
    --name LyCoV-1404 \
    --input tests/sars2/escape/LyCoV-1404_avg.csv \
    --sitemap tests/sars2/site_numbering_map.csv \
@@ -121,7 +121,11 @@ About 11.96% of the data sites are missing from the structure.
 Success! The visualization json was written to 'tests/sars2/output/LyCoV-1404.json'
 ```
 
-This message provides some information about the `configure-dms-viz` run on your dataset. In addition to this message, there should be a `.json` file located where you specified the output path ([`tests/sars2/output/LyCoV-1404.json`](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/output/LyCoV-1404.json)). In the next section, you'll take this `.json` visualization file and visualize your data with [**`dms-viz`**](https://dms-viz.github.io/).
+This message provides some information about the `configure-dms-viz format` run on your dataset. In addition to this message, there should be a `.json` file located where you specified the output path ([`tests/sars2/output/LyCoV-1404.json`](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/output/LyCoV-1404.json)).
+
+This is how you can use `configure-dms-viz` to format a single dataset. You can optionally combine multiple datasets into a single `.json` specification file using the `configure-dms-viz join` command. this command takes a list of `.json` files as an arguments along with an optional description of the datasets. For more details on combining datasets, check out the [API](/preparing-data/command-line-api).
+
+For now, since we're only visualizing a single dataset, we can skip this step. In the next section, you'll take this `.json` visualization file and visualize your data with [**`dms-viz`**](https://dms-viz.github.io/).
 
 ## Visualizing
 
@@ -151,4 +155,4 @@ You can try yourself by pasting the following link into the URL text box:
 https://raw.githubusercontent.com/dms-viz/configure_dms_viz/main/tests/sars2/output/sars2.json
 ```
 
-This approach has some advantages. For example, after providing a link to your data, this link is saved in the URL, allowing you to share a view of **`dms-viz`** with the data pre-loaded and ready to view. Also, this approach allows you to proivde a markdown description (also hosted remotely) of the datasets. For more details on using the web-based portion of **`dms-viz`** including hosting, interacting, and sharing your files, check out the [interaction reference](/visualizing-data/web-tool-api/).
+This approach has some advantages. For example, after providing a link to your data, this link is saved in the URL, allowing you to share a view of **`dms-viz`** with the data pre-loaded and ready to view. For more details on using the web-based interface of **`dms-viz`** including hosting, interacting, and sharing your files, check out the [interaction reference](/visualizing-data/web-tool-api/).

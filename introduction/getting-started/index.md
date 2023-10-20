@@ -123,7 +123,7 @@ Success! The visualization json was written to 'tests/sars2/output/LyCoV-1404.js
 
 This message provides some information about the `configure-dms-viz format` run on your dataset. In addition to this message, there should be a `.json` file located where you specified the output path ([`tests/sars2/output/LyCoV-1404.json`](https://github.com/dms-viz/configure_dms_viz/blob/main/tests/sars2/output/LyCoV-1404.json)).
 
-This is how you can use `configure-dms-viz` to format a single dataset. You can optionally combine multiple datasets into a single `.json` specification file using the `configure-dms-viz join` command. this command takes a list of `.json` files as an arguments along with an optional description of the datasets. For more details on combining datasets, check out the [API](/preparing-data/command-line-api).
+This is how you can use `configure-dms-viz` to format a single dataset. You can optionally combine multiple datasets into a single `.json` specification file using the `configure-dms-viz join` command. this command takes a list of `.json` files as an arguments along with an optional description of the datasets. For more details on combining datasets, check out the [API](/preparing-data/command-line-api/).
 
 For now, since we're only visualizing a single dataset, we can skip this step. In the next section, you'll take this `.json` visualization file and visualize your data with [**`dms-viz`**](https://dms-viz.github.io/).
 

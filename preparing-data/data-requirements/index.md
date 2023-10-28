@@ -66,7 +66,11 @@ The sitemap must be in `.csv` format. If your data is tabular but in another for
 
 - ### `protein_site`
 
-  _Optionally_, this column is only necessary if the `reference_site` sites are different from the sites in your provided protein strucutre. If they are different, this column is the position in the protein structure that corresponds to the `reference_site` values in your data.
+  _Optionally_, this column is only necessary if the `reference_site` sites are different from the sites (residue numbering) in your provided protein strucutre. If they are different, this column is the position in the protein structure that corresponds to the `reference_site` values in your data.
+
+- ### `chains`
+
+_Optionally_, this column is only necessary if you've provided the `protein_site` column and there are multiple `reference_site` sites for the same value of `protein_site`. This might be the case if your data corresponds to _discontinuous chains_ in the protein structure. For example, if your data is measured over two separate chains with overlapping numbering schemes. For example, Influenza HA protein structures usually have separate chains with overlapping numbering for the stalk and the head. So the reference sites 102 and 30(HA) might both correspond to the residue number 102 in the PDB file. In that case, the only way to distinguish between them on the structure is with the identity of the chain (i.e. A vs. B). This column should have chains in the same format as the chains provided to [`--included-chains`](/preparing-data/command-line-api/#included-chains) (i.e. a space separated string of chains: "A B C D").
 
 ## Join Data
 

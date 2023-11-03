@@ -106,7 +106,7 @@ _This subcommand formats your data for **`dms-viz`**. Below is a description of 
 
   `<dict>`
 
-  A dictionary that establishes the range for each filter (i.e. `"{'effect': [min, max], 'times_seen': [min, max]}"`).
+  A dictionary that establishes the range and default value for each filter (i.e. `"{'effect': [min, value, max], 'times_seen': [min, value, max]}"`). _Optionally_, you can only specify the min and max (i.e. `[min, max]`), but it's **highly** recommended that if you have a filter, you should set a default value that's interpretable.
 
 - ### `--included-chains`
 

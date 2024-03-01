@@ -166,6 +166,10 @@ _This subcommand formats your data for **`dms-viz`**. Below is a description of 
 
 _This subcommand joins multiple formatted `.json` datasets into one that you can then visualize with **`dms-viz`**. Below is a description of each arguement._
 
+:::warning
+Make sure that you're joining files with unique values for the dataset [name](/preparing-data/command-line-api/#name).
+:::
+
 - ### `--input`
 
   `<list>`

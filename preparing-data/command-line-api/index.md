@@ -17,7 +17,7 @@ configure-dms-viz format \
     [optional_arguments]
 ```
 
-This creates a single dataset that can be loaded into **`dms-viz`**. However, in some cases, you might want to visualize multiple datasets simultaneously. To do this, you use the `configure-dms-viz join` command. The `join` command takes a list of formatted `.json` files and combines them into a single `.json` specification file containing each dataset. Optionally, you can also provide a description of the file by specifying the path to a `.md` file with your desired description:
+This creates a single dataset that can be loaded into **`dms-viz`**. However, in some cases, you might want to visualize multiple datasets simultaneously. To do this, you use the `configure-dms-viz join` command. The `join` command takes a list of formatted `.json` files and combines them into a single `.json` specification file containing each dataset. Optionally, you can also describe the file by specifying the path to a `.md` file with your desired description:
 
 ```bash
 configure-dms-viz join \
@@ -28,13 +28,13 @@ configure-dms-viz join \
 
 ## `configure-dms-viz format`
 
-_This subcommand formats your data for **`dms-viz`**. Below is a description of each arguement._
+_This subcommand formats your data for **`dms-viz`**. Below is a description of each argument._
 
 - ### `--input`
 
   `<string>`
 
-  Path to a `.csv` file with site- and mutation-level data to visualize on a protein structure. [See details here](/preparing-data/data-requirements/) for required columns and format.
+  Path to a `.csv` file with site- and mutation-level data to visualize with a protein structure. [See details [here](/preparing-data/data-requirements/) for the required columns and format.
 
 - ### `--name`
 
@@ -46,13 +46,13 @@ _This subcommand formats your data for **`dms-viz`**. Below is a description of 
 
   `<string>`
 
-  Path to a `.csv` file containing a map between reference sites in the experiment and sequential sites. [See details here](/preparing-data/data-requirements/) for required columns and format.
+  Path to a `.csv` file containing a map between reference sites in the experiment and sequential sites. [See details here](/preparing-data/data-requirements/) for the required columns and format.
 
 - ### `--metric`
 
   `<string>`
 
-  Name of the column that contains the value to visualize on the protein structure. This tells the tool which column you want to visualize on a protein strucutre.
+  Name of the column that contains the value to visualize with the protein structure. This tells the tool which column you want to visualize on a protein structure.
 
 - ### `--structure`
 
@@ -70,25 +70,25 @@ _This subcommand formats your data for **`dms-viz`**. Below is a description of 
 
   `<string>`
 
-  If there are multiple measurements per mutation, the name of the column that contains that condition distinguishing these measurements.
+  If there are multiple measurements for each mutation, the name of the column that contains the condition distinguishing these measurements.
 
 - ### `--metric-name`
 
   `<string>`
 
-  The name that will show up for your metric in the plot. This let's you customize the names of your columns in your visualization. For example, if your metric column is called `escape_mean` you can rename it to `Escape` for the visualization.
+  The name that will show up for your metric in the plot. This lets you customize the names of your columns in your visualization. For example, if your metric column is called `escape_mean` you can rename it to `Escape` for the visualization.
 
-- ### `--conditon_name`
+- ### `--condition_name`
 
   `<string>`
 
-  The name that will show up for your condition column in the title of the plot legend. For example, if your condition column is 'epitope', you might rename it to be capilized as 'Epitope' in the legend title.
+  The name that will show up for your condition column in the title of the plot legend. For example, if your condition column is 'epitope', you might rename it to be capitalized as 'Epitope' in the legend title.
 
 - ### `--join-data`
 
   `<list>`
 
-  A comma separated list of `.csv` file with data to join to the visualization data. This data can then be used in the visualization tooltips or filters. [See details here](/preparing-data/data-requirements/) for formatting requirements.
+  A comma-separated list of `.csv` files with data to join to the visualization data. This data can then be used in the visualization tooltips or filters. [See details here](/preparing-data/data-requirements/) for formatting requirements.
 
 - ### `--tooltip-cols`
 
@@ -112,7 +112,7 @@ _This subcommand formats your data for **`dms-viz`**. Below is a description of 
 
   `<string>`
 
-  A space-delimited string of chain names that correspond to the chains in your PDB structure that correspond to the reference sites in your data (i.e., `'C F M G J P'`). This is only necesary if your PDB structure contains chains that you do not have site- and mutation-level measurements for.
+  A space-delimited string of chain names that correspond to the chains in your PDB structure that correspond to the reference sites in your data (i.e., `'C F M G J P'`). This is only necessary if your PDB structure contains chains that lack site- and mutation-level measurements.
 
 - ### `--excluded-chains`
 
@@ -130,31 +130,31 @@ _This subcommand formats your data for **`dms-viz`**. Below is a description of 
 
   `<list>`
 
-  A comma separated list (with no spaces) of HEX format colors for representing different conditions, i.e. `"#0072B2,#CC79A7,#4C3549,#009E73"`.
+  A comma-separated list (with no spaces) of HEX format colors for representing different conditions, i.e. `"#0072B2,#CC79A7,#4C3549,#009E73"`.
 
 - ### `--negative-colors`
 
   `<list>`
 
-  A comma separated list (with no spaces) of HEX format colors for representing the negative end of the scale for different conditions, i.e. `"#0072B2,#CC79A7,#4C3549,#009E73"`. If not provided, the inverse of each color is automatically calculated.
+  A comma-separated list (with no spaces) of HEX format colors for representing the negative end of the scale for different conditions, i.e. `"#0072B2,#CC79A7,#4C3549,#009E73"`. If not provided, the inverse of each color is automatically calculated.
 
 - ### `--check-pdb`
 
   `<bool>`
 
-  Whether to perform checks on the provided pdb structure including checking if the 'included chains' are present, what % of data sites are missing, and what % of wildtype residues in the data match at corresponding sites in the structure.
+  Whether to perform checks on the provided PDB structure including checking if the 'included chains' are present, what % of data sites are missing, and what % of wildtype residues in the data match at corresponding sites in the structure.
 
 - ### `--exclude-amino-acids`
 
   `<list>`
 
-  A comma separated list of amino acids that shouldn't be used to calculate the summary statistics (i.e. `"\*, -"`)
+  A comma-separated list of amino acids that shouldn't be used to calculate the summary statistics (i.e. `"\*, -"`)
 
 - ### `--description`
 
   `<string>`
 
-  A short description of the dataset that will show up in the tool if the user clicks a button for more information.
+  A short description of the dataset that shows up in the tool if the user clicks a button for more information.
 
 - ### `--title`
 
@@ -164,7 +164,7 @@ _This subcommand formats your data for **`dms-viz`**. Below is a description of 
 
 ## `configure-dms-viz join`
 
-_This subcommand joins multiple formatted `.json` datasets into one that you can then visualize with **`dms-viz`**. Below is a description of each arguement._
+_This subcommand joins multiple formatted `.json` datasets into one that you can then visualize with **`dms-viz`**. Below is a description of each argument._
 
 :::warning
 Make sure that you're joining files with unique values for the dataset [name](/preparing-data/command-line-api/#name).
@@ -174,7 +174,7 @@ Make sure that you're joining files with unique values for the dataset [name](/p
 
   `<list>`
 
-  A comma separated list of paths to the `.json` visualization files created by `configure-dms-viz format`. I.e. `--input path/to/my/specification_1.json, path/to/my/specification_2.json, path/to/my/specification_3.json`
+  A comma-separated list of paths to the `.json` visualization files created by `configure-dms-viz format`. I.e. `--input path/to/my/specification_1.json, path/to/my/specification_2.json, path/to/my/specification_3.json`
 
 - ### `--output`
 

@@ -2,31 +2,31 @@
 
 Welcome to the `dms-viz` project! [dms-viz](https://dms-viz.github.io/) is an interactive tool for visualizing mutation-level data in the context of a 3D protein structure. The tool consists of two parts:
 
-1. A [Command Line Interface (CLI)](https://github.com/dms-viz/configure_dms_viz) written in Python used to format data into a `.json` file that can be uploaded
+1. A [Command Line Interface (CLI)](https://github.com/dms-viz/configure_dms_viz) written in Python is used to format data into a `.json` file that can be uploaded
    to
 2. An [interactive web-based visualization](https://github.com/dms-viz/dms-viz.github.io) tool written with Javascript, [D3.js](https://d3js.org/), and [NGL.js](https://nglviewer.org/).
 
-Because this project is built in two separate components, each in their own repositories, this contributing/developing guide is split into two parts.
+Because this project is built in two separate components, each in its own repository, this contributing/developing guide is split into two parts.
 
-If you're intersted in contributing to this project, please reach out on [GitHub](https://github.com/dms-viz)!
+If you're interested in contributing to this project, please reach out on [GitHub](https://github.com/dms-viz)!
 
 ## Contributing to `configure_dms_viz`
 
-Thank you for your interest in contributing to `configure_dms_viz`! Here is guide on how to develop this package as well as some guidelines for contributing.
+Thank you for your interest in contributing to `configure_dms_viz`! Here is a guide on how to develop this package as well as some guidelines for contributing.
 
 ### Developing
 
 <br>
 
-#### 1. Set Up Your Environment:
+#### 1. Set Up Your Environment
 
 We use [`Poetry`](https://python-poetry.org/) for dependency management and packaging. If you don't have it installed, get it [here](https://python-poetry.org/docs/#installation).
 
-#### 2. Fork the Repository:
+#### 2. Fork the Repository
 
 Before you start making changes, fork the repository to your own GitHub account.
 
-#### 3. Clone Your Fork:
+#### 3. Clone Your Fork
 
 Clone your forked repository to your local machine.
 
@@ -35,7 +35,7 @@ git clone https://github.com/dms-viz/configure_dms_viz.git
 cd configure_dms_viz
 ```
 
-#### 4. Install Dependencies:
+#### 4. Install Dependencies
 
 With `Poetry`, setting up the project environment and installing dependencies is easy:
 
@@ -43,11 +43,11 @@ With `Poetry`, setting up the project environment and installing dependencies is
 poetry install
 ```
 
-### Contributing Guidelines:
+### Contributing Guidelines
 
 <br>
 
-#### 1. Work on a New Branch:
+#### 1. Work on a New Branch
 
 Don't work directly on the main branch. Create a new branch for your feature or bug fix.
 
@@ -55,29 +55,29 @@ Don't work directly on the main branch. Create a new branch for your feature or 
 git checkout -b your-new-feature-or-fix
 ```
 
-#### 2. Document Your Changes:
+#### 2. Document Your Changes
 
-Make sure to comment your code appropriately. If you're introducing a new feature or making significant changes, update the README.md file as necessary.
+Make sure to add comments to your code appropriately. If you're introducing a new feature or making significant changes, update the README.md file as necessary.
 
-#### 3. Commit Your Changes:
+#### 3. Commit Your Changes
 
 Make granular commits with meaningful commit messages. This makes it easier to review your contributions.
 
-#### 4. Versioning:
+#### 4. Versioning
 
 Versioning follows semantic versioning (i.e. `X.Y.Z.`) where each component represents:
 
-1.  Major version (`X`): This number is incremented when there are breaking changes that require updates to the web tool API.
+1. Major version (`X`): This number is incremented when there are breaking changes that require updates to the web tool API.
 
-2.  Minor version (`Y`): This number is incremented when new features are added in a backward-compatible manner.
+2. Minor version (`Y`): This number is incremented when new features are added in a backward-compatible manner.
 
-3.  Patch version (`Z`): This number is incremented when backward-compatible bug fixes are introduced.
+3. Patch version (`Z`): This number is incremented when backward-compatible bug fixes are introduced.
 
 ::: warning Important!
 Make sure that the version is incremented in the `pyproject.toml`, otherwise publishing to PyPI will fail. Also, make sure to update the `CHANGELOG` to document your changes.
 :::
 
-#### 4. Push to Your Fork:
+#### 4. Push to Your Fork
 
 Push the changes to your forked repository.
 
@@ -85,7 +85,7 @@ Push the changes to your forked repository.
 git push origin your-new-feature-or-fix
 ```
 
-#### 5. Create a Pull Request:
+#### 5. Create a Pull Request
 
 Once you're done with your changes and you think it's ready for review, create a pull request from your forked repository to the original repository.
 
@@ -95,7 +95,7 @@ The code is formatted using `Black`, which will be installed as a development de
 
 ## Contributing to `dms-viz.github.io`
 
-Thanks for your interest into contributing to the visualization component of **`dms-viz`**! Below is a quick guide for developing the website along with some guidelines for contributing.
+Thanks for your interest in contributing to the visualization component of **`dms-viz`**! Below is a quick guide for developing the website along with some guidelines for contributing.
 
 ### Developing
 
@@ -143,11 +143,11 @@ Remember to fetch the latest changes from the main repository before you start w
 
 ### Code Guidelines
 
-We aim for clean and consistent code across the entire project. To this end, we use `ESLint` for linting and `Prettier` for code formatting. Make sure to install these extensions to your code editor. Before making a Pull Request, ensure your code adheres to these formatting guidelines.
+We aim for clean and consistent code across the entire project. To this end, we use `ESLint` for linting and `Prettier` for code formatting. Make sure to install these extensions in your code editor. Before making a Pull Request, ensure your code adheres to these formatting guidelines.
 
 ### Versioning
 
-To ensure backward compatibility with older verions of specifications generated by `configure_dms-viz`, our web-based visualization tool employs a systematic versioning strategy. Whenever there are major updates or modifications to the tool, which might affect the existing JSON specifications or the overall behavior of the visualization, we introduce a new version. Here's how the versioning system works:
+To ensure backward compatibility with older versions of specifications generated by `configure_dms-viz`, our web-based visualization tool employs a systematic versioning strategy. Whenever there are major updates or modifications to the tool, that might affect the existing JSON specifications or the overall behavior of the visualization, we introduce a new version. Here's how the versioning system works:
 
 #### Version Routes
 

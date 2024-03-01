@@ -2,7 +2,7 @@
 
 ## Uploading Data
 
-There are two ways to upload data into **`dms-viz`**. You can either upload a **local** specification file from your computer, or you can provide a link to a **remote** specification file hosted somewhere like [GitHub](https://github.com/). You'll find the options for uploading data under the `Upload Data` section of the sidemenu.
+There are two ways to upload data into **`dms-viz`**. You can either upload a **local** specification file from your computer, or you can provide a link to a **remote** specification file hosted somewhere like [GitHub](https://github.com/). You'll find the options for uploading data under the `Upload Data` section of the side menu.
 
 ### Local
 
@@ -14,19 +14,19 @@ To upload a local file, you simply click on the `Upload Data` section and choose
 
 ### Remote
 
-Alternativley, if your raw `.json` file is hosted somewhere online – like on GitHub, for example – you can provide the link to this file by clicking on the `Remote` button under the `Upload Data` section.
+Alternatively, if your raw `.json` file is hosted somewhere online – like on GitHub, for example – you can provide the link to this file by clicking on the `Remote` button under the `Upload Data` section.
 
 <div align="center">
   <img src="/assets/remote-upload-example.png" alt="Remote Upload" />
 </div>
 
-You can try yourself by pasting the following link into the URL text box:
+You can try it yourself by pasting the following link into the URL text box:
 
 ```md
 https://raw.githubusercontent.com/dms-viz/configure_dms_viz/main/tests/sars2/output/sars2.json
 ```
 
-This approach has some advantages. For example, after providing a link to your data, this link is saved in the URL, allowing you to share a view of **`dms-viz`** with the data pre-loaded and ready to view. Also, this approach allows you to proivde a markdown description (also hosted remotely) of the datasets.
+This approach has some advantages. For example, after providing a link to your data, this link is saved in the URL, allowing you to share a view of **`dms-viz`** with the data pre-loaded and ready to view. Also, this approach allows you to provide a markdown description (also hosted remotely) of the datasets.
 
 #### Providing A Description
 
@@ -40,7 +40,7 @@ Just like the remote `.json` specification, the link to the markdown is saved in
 
 ## Chart Configuration
 
-**`dms-viz`** provides a handful of ways to navigate and customize the visualization. You can find these options under the `Chart Options` tab in the sidemenu.
+**`dms-viz`** provides a handful of ways to navigate and customize the visualization. You can find these options under the `Chart Options` tab in the side menu.
 
 <div align="center">
   <img src="/assets/chart-options.png" alt="Chart Options" />
@@ -48,15 +48,15 @@ Just like the remote `.json` specification, the link to the markdown is saved in
 
 - ### `Dataset`
 
-  Although `configure-dms-viz` will return only a single `.json` specification, it is possible to combine multiple `.json` specification in a single file to visualize. If there are multiple datasets in the `.json` file, you can navigate between these using the `Dataset` dropdown menu. The name that appears in the dropdown for each dataset depends on the [`--name`](/preparing-data/command-line-api/#name) flag.
+  Although `configure-dms-viz` will return only a single `.json` specification, it is possible to combine multiple `.json` specifications in a single file to visualize. If there are multiple datasets in the `.json` file, you can navigate between these using the `Dataset` dropdown menu. The name that appears in the dropdown for each dataset depends on the [`--name`](/preparing-data/command-line-api/#name) flag.
 
   Additionally, next to the `Dataset` dropdown menu there is an information icon ⓘ. By clicking on this icon, a short description of the dataset appears above the top plot. The description can be specified using the [`--description`](/preparing-data/command-line-api/#description) flag.
 
 - ### `Condition`
 
-  If your input data has multiple measurements per mutation/site combination that are distinguished by some _condition_ (specified by the [`--condition`](/preparing-data/command-line-api/#condition) flag), an interactive legend appears under `Chart Options`.
+  If your input data has multiple measurements for each mutation/site combination that are distinguished by some _condition_ (specified by the [`--condition`](/preparing-data/command-line-api/#condition) flag), an interactive legend appears under `Chart Options`.
 
-  Although the default label that appears above the legend is `Condition`, you can specify the label using the [`--conditon_name`](/preparing-data/command-line-api/#condition_name) flag.
+  Although the default label that appears above the legend is `Condition`, you can specify the label using the [`--condition_name`](/preparing-data/command-line-api/#condition_name) flag.
 
 - ### `Summary Metric`
 
@@ -72,7 +72,7 @@ Just like the remote `.json` specification, the link to the markdown is saved in
 
 ## Protein Configuration
 
-**`dms-viz`** provides a handful of ways to navigate and customize the 3D protein structure. You can find these options under the `Protein Configuration` tab in the sidemenu.
+**`dms-viz`** provides a handful of ways to navigate and customize the 3D protein structure. You can find these options under the `Protein Configuration` tab in the side menu.
 
 <div align="center">
   <img src="/assets/protein-options.png" alt="Protein Options" />
@@ -87,7 +87,7 @@ There are _four_ components of the protein structure whose appearances can be co
 | `Peripheral` | The chains that are aren't excluded (by the [`--exclude-chains`](/preparing-data/command-line-api/#exclude-chains) flag) but don't have corresponding data (aren't included in the [`--included-chainss`](/preparing-data/command-line-api/#included-chains)). |
 | `Ligand`     | If `Show Ligands` is checked, the ligands (i.e. glycans, small molecules, etc...) in the structure.                                                                                                                                                            |
 
-For each of these separate compnents, there are options to change the following:
+For each of these separate components, there are options to change the following:
 
 - ### `Representation`
 
@@ -95,11 +95,11 @@ For each of these separate compnents, there are options to change the following:
 
 - ### `Color`
 
-  The color of the molecules. All of the molecules for a given component will be the same color with the exeption ligands which can be colored by their element.
+  The color of the molecules. All of the molecules for a given component will be the same color, however, ligands can be colored by element.
 
 - ### `Opacity`
 
-  The opacity of the component. This can be helpful for illustrating the molecular structure with the `metric` superimposed on the surface of the protein.
+  The opacity of the component. This can help illustrate the molecular structure with the `metric` superimposed on the surface of the protein.
 
 ## Interaction
 
@@ -113,7 +113,7 @@ You can **zoom** in and out of regions of your data by **brushing** (_click and 
   <source src="/assets/zoom-on-lineplot.mp4">
 </video>
 
-You can **mouseover** sites on the line/point and mutations on the heatmap to see details in a pop-up **tooltip** and you can **select sites** to see in the **heatmap** by **clicking** on points in the line/point plot.
+You can **mouse over** sites on the line/point and mutations on the heatmap to see details in a pop-up **tooltip** and you can **select sites** to see in the **heatmap** by **clicking** on points in the line/point plot.
 
 <video controls="controls" name="Heatmap Example">
   <source src="/assets/select-on-heatmap.mp4">
@@ -131,7 +131,7 @@ To **deselect sites**, you can either **double-click** on the line/point plot or
   <source src="/assets/deselect-sites-on-protein.mp4">
 </video>
 
-If there is more than one condition in your data, an interactive legend will appear in the `Chart Options` You can **select a condition** to color the protein structure with by **clicking** on an condition in the legend.
+If there is more than one condition in your data, an interactive legend will appear in the `Chart Options` You can **select a condition** to color the protein structure with by **clicking** on a condition in the legend.
 
 <video controls="controls" name="Protein Condition Example">
   <source src="/assets/select-conditions-on-protein.mp4">
@@ -161,7 +161,7 @@ You can simply share the `.json` specifications that you create with `configure-
 
 ### 2. Share static images
 
-If you're only interested in a particular plot or the protein, you can save and download `.png` images. Under the `Download Session` tab in the sidemenu, you'll see buttons to download an image of both the plot and the protien.
+If you're only interested in a particular plot or protein, you can save and download `.png` images. Under the `Download Session` tab in the side menu, you'll see buttons to download an image of both the plot and the protein.
 
 <div align="center">
   <img src="/assets/download-options.png" alt="Download Options" />
@@ -169,4 +169,4 @@ If you're only interested in a particular plot or the protein, you can save and 
 
 ### 3. Share the URL links
 
-If you data is hosted on a remote server like `GitHub`, you can copy the link from your session. This link keeps track of your data, an _optional_ description, and all of the configuration options that you've selected.
+If your data is hosted on a remote server like `GitHub`, you can copy the link from your session. This link keeps track of your data, an _optional_ description, and all of the configuration options that you've selected.

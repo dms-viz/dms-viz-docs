@@ -1,8 +1,10 @@
 # Command Line API
 
+You'll need to use the command line tool `configure_dms_viz` to prepare your data for **`dms-viz`**. Follow the instructions in [Getting Started](/introduction/getting-started/) to install `configure_dms_viz` on your operating system.
+
 ## Basic Usage
 
-`configure_dms_viz` is a command-line tool designed to create a `JSON` format specification file for [**`dms-viz`**](https://dms-viz.github.io/). You provide the data that you'd like to visualize along with additional information to customize the analysis. The resulting specification file can be uploaded to **`dms-viz`** for interactive visualization of your data. Below is an overview of the process of using `configure_dms_viz`.
+`configure_dms_viz` is a command-line tool designed to create a `.json` format specification file for [**`dms-viz`**](https://dms-viz.github.io/). You provide the data that you'd like to visualize along with additional information to customize the analysis. The resulting specification file can be uploaded to **`dms-viz`** for interactive visualization of your data. Below is an overview of the process of using `configure_dms_viz`.
 
 `configure-dms-viz` has two commands; `format` and `join`. To format your data, you execute the `configure-dms-viz format` command with the required and optional arguments as needed:
 
@@ -12,12 +14,11 @@ configure-dms-viz format \
     --input <input_csv> \
     --metric <metric_column> \
     --structure <pdb_structure> \
-    --sitemap <sitemap_csv> \
     --output <output_json> \
     [optional_arguments]
 ```
 
-This creates a single dataset that can be loaded into **`dms-viz`**. However, in some cases, you might want to visualize multiple datasets simultaneously. To do this, you use the `configure-dms-viz join` command. The `join` command takes a list of formatted `.json` files and combines them into a single `.json` specification file containing each dataset. Optionally, you can also describe the file by specifying the path to a `.md` file with your desired description:
+This creates a single dataset that can be loaded into **`dms-viz`**. However, in some cases, you might want to visualize multiple datasets simultaneously. To do this, you use the `configure-dms-viz join` command. The `join` command takes a list of formatted `.json` files and combines them into a single `.json` specification file containing each dataset. Optionally, you can add a markdown description of your joined datasets by specifying the path to a `.md` file with your desired description:
 
 ```bash
 configure-dms-viz join \
@@ -25,6 +26,26 @@ configure-dms-viz join \
     --output <output_json> \
     --description <markdown_description>
 ```
+
+## Advanced Usage
+
+This is the most basic usage of `configure-dms-viz`; however, `configure-dms-viz` is a flexible formatting tool that provides many options for customizing your analysis. In addition to the description of the command line API below, we'll detail some highlights of the customization available through `configure-dms-viz`.
+
+### Custom Filters
+
+`configure-dms-viz` allows you to specify *quantitative* columns in your [input data](/preparing-data/data-requirements/#input-data) to use as dynamic filters in **`dms-viz`**. The columns you specify will populate sliders in the sidebar under "`Filters`". By dragging the slider, you filter out the mutations or sites in the visualization with values less than the selected value for the column you specify.
+
+To add filters with `configure-dms-viz`, specify *quantitative* columns using the `--filter-cols` flag by providing a dictionary that establishes your chosen columns and the name that will appear in the visualization (i.e. `"{'effect': 'Functional Effect', 'times_seen': 'Times Seen'}"`). In this example, the columns that are used as filters are `effect` and `times_seen` in the input data, and the names that will label the filters are `Functional Effect` and `Times Seen`.
+
+In addition to specifying filters, you can set their default value and limits with the `--filter-limits` flag by providing a dictionary formatted like so: `"{'effect': [min, value, max], 'times_seen': [min, value, max]}"`. You can *only* specify the min and max (i.e. `[min, max]`), but it's **highly** recommended that you set a default value for the filter that makes sense for your data.
+
+Check out vignette #2 in the [Vignettes](/visualizing-data/vignettes/) for an example visualization that uses filters.
+
+### Custom Tooltips
+
+In a similar process to adding custom filters, `configure-dms-viz` allows you to specify columns to include as tooltips. Tooltips will appear when you center your mouse over a point in the line-point summary plot at the center of the visualization.
+
+Use the `--tooltip-cols` flag to specify columns that should provide information through tooltips by providing a dictionary like so: `"{'times_seen': '# Obsv', 'effect': 'Func Eff.'}"`, where the key is the column's name and the value is the label as it should appear in the tooltip.
 
 ## `configure-dms-viz format`
 
@@ -34,7 +55,7 @@ _This subcommand formats your data for **`dms-viz`**. Below is a description of 
 
   `<string>`
 
-  Path to a `.csv` file with site- and mutation-level data to visualize with a protein structure. [See details [here](/preparing-data/data-requirements/) for the required columns and format.
+  Path to a `.csv` file with site- and mutation-level data to visualize with a protein structure. [See details here](/preparing-data/data-requirements/) for the required columns and format.
 
 - ### `--name`
 

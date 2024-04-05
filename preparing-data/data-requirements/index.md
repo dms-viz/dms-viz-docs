@@ -1,14 +1,19 @@
 # Data Requirements
 
-To use **`dms-viz`**, you'll need two files. First, you'll need some [input data](#input-data) that contains the mutation-based data you'd like to visualize. Second, you'll need [a map](#sitemap) of the sites that are mutated in your dataset to the sites in the reference and protein structure.
+There are only two pieces of information you need for **`dms-viz`**:
 
-_optionally_, if you have [additional data files](#join-data), you can join these with your input data.
+1. You'll need [input data](#input-data). Your data should have a quantitative metric associated with mutations to a protein sequence.
+2. You'll need a 3D structure for your protein. The structure can be associated with an [RCSB ID](https://www.rcsb.org/) or provided in a custom `.pdb` file.
 
-Below are the detailed requirements for each data file along with example datasets.
+Everything beyond these two requirements is __optional__.
+
+There are certain cases where you will need to provide additional information. For example, if the reference positions in your input data don't match the reference positions in your `.pdb` file, you'll need to specify a [`sitemap`](/preparing-data/data-requirements/#sitemap). Also, if you have data from another dataset that you wish to include in filters or tooltips, you can provide [`join data`](/preparing-data/data-requirements/#join-data) to merge with the input data.
+
+The formatting requirements for the input data and optional data are explained below in detail.
 
 ## Input Data
 
-The **Input Data** is the data that you'd like to summarize and visualize on an interactive protein structure. It must contain a column with a quantitative metric that's associated with mutations in a protein sequence. For example, this data could be a fitness score associated with mutations to a protein, or a score that represents how a mutation changes antibody binding to an antigen. For detailed examples of **`dms-viz`** in action, check out these [Vignettes](/visualizing-data/vignettes/).
+The **Input Data** is the mutation-based data that you'd like to summarize and visualize on an interactive protein structure. It must contain a column with a quantitative metric that's associated with mutations in a protein sequence. For example, this data could be a fitness score associated with mutations to a protein, or a score that represents how a mutation changes antibody binding to an antigen. For detailed examples of use cases for **`dms-viz`**, check out these [Vignettes](/visualizing-data/vignettes/).
 
 ::: warning Important!
 The input data must be in `.csv` format. If your data is tabular but in another format, please convert it to `.csv`.
@@ -18,7 +23,7 @@ The input data must contain the following columns with **exactly** these names:
 
 - ### `site` or `reference_site`
 
-  This column should contain the **site** in the protein at which each measurement was made. This column can be numeric (i.e., `[1, 2, 3, 4]`) or it can contain strings (i.e., `[1, 2, 2a, 2b, 3]`). Additionally, the sites do not need to be continuous (i.e., `[1, 4, 5, 8]`). The order of your sites will be specified in the [Sitemap](#sitemap) using the `sequential_site` column. These sites will label the x-axis of all summary plots in **`dms-viz`**.
+  This column should contain the **site** in the protein at which each measurement was made. This column can be numeric (i.e., `[1, 2, 3, 4]`) or it can contain strings (i.e., `[1, 2, 2a, 2b, 3]`). Additionally, the sites do not need to be continuous (i.e., `[1, 4, 5, 8]`). The order of your sites is assumed to be their order in the data unless it is specified in the [Sitemap](#sitemap) using the `sequential_site` column. These __reference__ sites will label the x-axis of all summary plots in **`dms-viz`**. In addition, the `site` or `reference_site` in the input data is assumed to match the position in the provided protein structure. If the sites are numbered differently between your data and protein structure, you must specify the correct mapping in the `protein_site` column of the [Sitemap](#sitemap).
   
   For more details on what we mean by 'reference_site', check out the [description of the sitemap file](/preparing-data/data-requirements/#reference-site).
 
@@ -28,11 +33,11 @@ The input data must contain the following columns with **exactly** these names:
 
 - ### `wildtype`
 
-  This column should contain the **wildtype** identity of residues at a given site in the protein. For example, if a Proline (`P`) was mutated to an Alanine (`A`) at position 120 in the protein (`P120A`), there should be a `P` in the wildtype column for every row where the value of the site column is 120. This column will also be used to check how well the protein structure you provided matches the wildtype sites in your data. Significant discrepancies can indicate that you're `reference`, `sequential`, and `protein` sites are misaligned.
+  This column should contain the **wildtype** identity of residues at a given site in the protein. For example, if a Proline (`P`) was mutated to an Alanine (`A`) at position 120 in the protein (`P120A`), there should be a `P` in the wildtype column for every row where the value of the site column is 120. This column will also be used to check how well the sequence of the protein structure you provided matches your data. Significant discrepancies can indicate that you're `reference`, `sequential`, and `protein` sites are misaligned.
 
 ---
 
-In addition to these three mandatory columns, you will also need to specify a `metric` column. The identity of this column is specified with the `--metric` flag of `configure-dms-viz`, and it can have any name:
+In addition to these three mandatory columns, you will also need to specify a `metric` column. The identity of this column is specified with the [`--metric`](/preparing-data/command-line-api/#metric) flag of `configure-dms-viz`, and it can have any name:
 
 - ### `<metric>`
 
@@ -40,11 +45,11 @@ In addition to these three mandatory columns, you will also need to specify a `m
 
 ---
 
-_Optionally_, depending on the design of your experiment, you can also include a "_condition column_" that specifies how your data is grouped if there are multiple measurements per mutation:
+_Optionally_, depending on the design of your experiment, you can also include a "_condition column_" that specifies how your data is grouped if there are multiple conditions. In other words, you are required to specify this column if there are multiple measurements for the same mutations.
 
 - ### `condition`
 
-  This column should only be included if there are multiple measurements in the [`<metric>`](/preparing-data/command-line-api/#metric) column for the same `site`/`mutation` combinations. An example of this would be if you have a measurement like an antibody's escape for multiple 'epitopes' in an antigen. This column contains a unique identifier that's used to delineate between these measurements for each mutation. This 'identifier' will show up in an interactive legend next to the visualization.
+  This column should only be included if there are multiple measurements in the [`<metric>`](/preparing-data/command-line-api/#metric) column for the same `site`/`mutation` combinations. For example, you'll need a condition column if your data contains a measurement like an antibody's escape for multiple 'epitopes' in an antigen. This column contains a unique identifier that's used to delineate between these measurements for each mutation. This 'identifier' will show up in an interactive legend next to the visualization.
 
 ## Sitemap
 

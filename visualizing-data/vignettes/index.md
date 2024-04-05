@@ -57,7 +57,7 @@ Which results in the `.json` specification located [here](https://github.com/dms
 
 </div>
 
-## 2. Inferring the fitness landscape of the SARS-CoV-2 proteome from pyhlogenetic data
+## 2. Inferring the fitness landscape of the SARS-CoV-2 proteome from phylogenetic data
 
 The scale of genomic sequencing surveillance of SARS-CoV-2 has led to the public availability of millions of SARS-CoV-2 sequences. [Bloom and Neher](https://doi.org/10.1101/2023.01.30.526314) developed an approach that leverages this massive amount of sequencing data to estimate the fitness effects of mutations in all SARS-CoV-2 proteins. Their approach works by computing the expected count of each mutation under neutral selection and comparing this count to the observed count of mutations along the [phylogeny](https://genome.ucsc.edu/cgi-bin/hgPhyloPlace). The result is an estimate of fitness that is very helpful for understanding the evolutionary constraint on the SARS-CoV-2 proteome. This kind of data is particularly useful for assessing the constraint on possible therapeutic targets that are untractable targets for deep mutational scanning.
 

@@ -1,12 +1,18 @@
 # Contributing Guide
 
-Welcome to the `dms-viz` project! [dms-viz](https://dms-viz.github.io/) is an interactive tool for visualizing mutation-level data in the context of a 3D protein structure. The tool consists of two parts:
+Welcome to the `dms-viz` project! [`dms-viz`](https://dms-viz.github.io/) is an interactive tool for visualizing mutation-level data in the context of a 3D protein structure. The tool consists of two parts:
 
 1. A [Command Line Interface (CLI)](https://github.com/dms-viz/configure_dms_viz) written in Python is used to format data into a `.json` file that can be uploaded
    to
 2. An [interactive web-based visualization](https://github.com/dms-viz/dms-viz.github.io) tool written with Javascript, [D3.js](https://d3js.org/), and [NGL.js](https://nglviewer.org/).
 
-Because this project is built in two separate components, each in its own repository, this contributing/developing guide is split into two parts.
+In addition to these two components, there is also the documentation that you're reading. The documentation is built using [`VitePress`](https://vitepress.dev/).
+
+Because this project contains multiple components, each in its repository, this contributing/developing guide is split into several parts:
+
+1. [Contributing to the Command Line Interface (CLI)](#contributing-to-configure_dms_viz)
+2. [Contributing to the Interactive Web Application](#contributing-to-dms-vizgithubio)
+3. [Contributing to the Documentation](#contributing-to-the-documentation)
 
 If you're interested in contributing to this project, please reach out on [GitHub](https://github.com/dms-viz)!
 
@@ -156,3 +162,36 @@ Each version of the tool is accessible through separate routes. If there are mul
 #### Sharing URLs
 
 This means that if you put a URL link in a paper, this link will automatically contain the version route, ensuring that the visualization will remain accessible and function correctly even after newer versions are released. For instance, a plot created with the `version 0` pre-release of the tool will have a URL structure like: https://dms-viz.github.io/V0/<unique_plot_identifier>.
+
+## Contributing to the documentation
+
+The repository for the documentation is located under the `dms-viz` GitHub organization [here](https://github.com/dms-viz/dms-viz-docs).
+
+### Developing
+
+The docs are created with [`VitePress`](https://vitepress.dev/). To develop the docs, follow the instructions below:
+
+1. Clone the repository
+
+```bash
+git clone git@github.com:dms-viz/dms-viz-docs.git
+cd dms-viz-docs
+```
+
+2. Install node packages
+
+```bash
+npm install
+```
+
+3. Start the development server
+
+```bash
+npx vitepress dev
+```
+
+Now, you should be able to see the website built locally. Changes to the website should be automatically reflected on the page. For details on the routing structure and how to develop a `VitePress` site, go to the [documentation for VitePress](https://vitepress.dev/guide/getting-started).
+
+### Deploying
+
+The docs are hosted on GitHub pages via a specific `gh-pages` branch and builds are automated using GitHub Actions via [this deployment script](/.github/workflows/deploy.yml). The website will build on `pull requests` and `pushes` to the `main` branch.

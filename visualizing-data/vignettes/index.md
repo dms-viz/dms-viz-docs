@@ -39,7 +39,7 @@ This results in an output `.json` file that can be visualized in the **`dms-viz`
 
 ```bash
 configure-dms-viz join 
-  --input tests/HIV-Envelope-BF520-DMS/input/IDC508_avg.csv, tests/HIV-Envelope-BF520-DMS/input/IDC513_avg.csv, tests/HIV-Envelope-BF520-DMS/input/IDC561_avg.csv, ...
+  --input tests/HIV-Envelope-BF520-DMS/input/IDC508_avg.json, tests/HIV-Envelope-BF520-DMS/input/IDC513_avg.json, tests/HIV-Envelope-BF520-DMS/input/IDC561_avg.json, ...
   --output tests/HIV-Envelope-BF520-DMS/output/HIV-Envelope-BF520-DMS.json 
   --description tests/HIV-Envelope-BF520-DMS/README.md 
 ```

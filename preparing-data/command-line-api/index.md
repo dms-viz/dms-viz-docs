@@ -1,10 +1,10 @@
 # Command Line API
 
-You'll need to use the command line tool `configure_dms_viz` to prepare your data for **`dms-viz`**. Follow the instructions in [Getting Started](/introduction/getting-started/) to install `configure_dms_viz` on your operating system.
+You'll need to use the command line tool `configure-dms-viz` to prepare your data for **`dms-viz`**. Follow the instructions in [Getting Started](/introduction/getting-started/) to install `configure-dms-viz` on your operating system.
 
 ## Basic Usage
 
-`configure_dms_viz` is a command-line tool designed to create a `.json` format specification file for [**`dms-viz`**](https://dms-viz.github.io/). You provide the data that you'd like to visualize along with additional information to customize the analysis. The resulting specification file can be uploaded to **`dms-viz`** for interactive visualization of your data. Below is an overview of the process of using `configure_dms_viz`.
+`configure-dms-viz` is a command-line tool designed to create a `.json` format specification file for [**`dms-viz`**](https://dms-viz.github.io/). You provide the data that you'd like to visualize along with additional information to customize the analysis. The resulting specification file can be uploaded to **`dms-viz`** for interactive visualization of your data. Below is an overview of the process of using `configure-dms-viz`.
 
 `configure-dms-viz` has two commands; `format` and `join`. To format your data, you execute the `configure-dms-viz format` command with the required and optional arguments as needed:
 

@@ -43,7 +43,7 @@ Check out vignette #2 in the [Vignettes](/visualizing-data/vignettes/) for an ex
 
 ### Custom Tooltips
 
-In a similar process to adding custom filters, `configure-dms-viz` allows you to specify columns to include as tooltips. Tooltips will appear when you center your mouse over a point in the line-point summary plot at the center of the visualization.
+In a similar process to adding custom filters, `configure-dms-viz` allows you to specify columns to include as tooltips. Tooltips are shown for each *mutation* in your dataset and will appear when you center your mouse over a mutation in the heatmap plot on the left of the visualization.
 
 Use the `--tooltip-cols` flag to specify columns that should provide information through tooltips by providing a dictionary like so: `"{'times_seen': '# Obsv', 'effect': 'Func Eff.'}"`, where the key is the column's name and the value is the label as it should appear in the tooltip.
 

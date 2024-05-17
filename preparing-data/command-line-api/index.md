@@ -129,6 +129,12 @@ _This subcommand formats your data for **`dms-viz`**. Below is a description of 
 
   A dictionary that establishes the range and default value for each filter (i.e. `"{'effect': [min, value, max], 'times_seen': [min, value, max]}"`). _Optionally_, you can only specify the min and max (i.e. `[min, max]`), but it's **highly** recommended that if you have a filter, you should set a default value that's interpretable.
 
+- ### `--heatmap-limits`
+
+  `<list>`
+
+  A list that is either 1, 2, or 3 values long that sets the either the center, the minimum and maximum, or the minimum, center and maximum of the heatmap's color scale depending on the number of values provided. The format of the list is a string where each of the values is separated by a comma (i.e. `-1, 0, 1`). If only a single value is provided, the center of the heatmap color scale is set based on the provided value. If two values are provided, the range of the scale is set based on the values. If three values are provided, the range and center of the scale are set. **Importantly**, the values set here **only** affect the heatmap's color scale, **not** the protein's color scale; the color scale of the protein will remain symmetric around 0.
+
 - ### `--included-chains`
 
   `<string>`

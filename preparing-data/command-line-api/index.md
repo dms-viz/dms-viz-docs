@@ -133,7 +133,7 @@ _This subcommand formats your data for **`dms-viz`**. Below is a description of 
 
   `<list>`
 
-  A list that is either 1, 2, or 3 values long that sets the either the center, the minimum and maximum, or the minimum, center and maximum of the heatmap's color scale depending on the number of values provided. The format of the list is a string where each of the values is separated by a comma (i.e. `-1, 0, 1`). If only a single value is provided, the center of the heatmap color scale is set based on the provided value. If two values are provided, the range of the scale is set based on the values. If three values are provided, the range and center of the scale are set. **Importantly**, the values set here **only** affect the heatmap's color scale, **not** the protein's color scale; the color scale of the protein will remain symmetric around 0.
+  A list that is either 1, 2, or 3 values long that sets either the center, the minimum and maximum, or the minimum, center and maximum of the heatmap's color scale depending on the number of values provided. The format of the list is a string where each of the values is separated by a comma (i.e. `-1, 0, 1`). If only a single value is provided, the center of the heatmap color scale is set based on the provided value. If two values are provided, the range of the scale is set based on the values. If three values are provided, the range and center of the scale are set. **Importantly**, the values set here **only** affect the heatmap's color scale, **not** the protein's color scale; the color scale of the protein will remain symmetric around 0.
 
 - ### `--included-chains`
 

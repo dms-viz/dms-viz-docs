@@ -189,6 +189,18 @@ _This subcommand formats your data for **`dms-viz`**. Below is a description of 
 
   A short title to appear above the plot.
 
+- ### `--floor`
+
+  `<bool>`
+
+  Set the default of whether the data will be floored at 0. Takes a boolean, either `True` or `False`.
+
+- ### `--summary-stat`
+
+  `<string>`
+
+  Set the default summary statistic to either `min`, `max`, `mean`, `median`, or `sum`.
+
 ## `configure-dms-viz join`
 
 _This subcommand joins multiple formatted `.json` datasets into one that you can then visualize with **`dms-viz`**. Below is a description of each argument._

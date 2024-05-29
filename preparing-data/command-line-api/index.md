@@ -227,3 +227,99 @@ Make sure that you're joining files with unique values for the dataset [name](/p
   `<string>`
 
   Path to a `markdown` file describing your dataset.
+
+## JSON Schema
+
+The output of the command line tool is a JSON specification file. The schema of the specification file is detailed below.
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "mut_metric_df": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "sitemap": {
+      "type": "object"
+    },
+    "metric_col": {
+      "type": "string"
+    },
+    "condition_col": {
+      "type": ["string", "null"]
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "condition_colors": {
+      "type": "object"
+    },
+    "negative_condition_colors": {
+      "type": ["object", "null"]
+    },
+    "alphabet": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pdb": {
+      "type": "string"
+    },
+    "dataChains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "excludeChains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "filter_cols": {
+      "type": ["object", "null"]
+    },
+    "filter_limits": {
+      "type": ["object", "null"]
+    },
+    "heatmap_limits": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "number"
+      }
+    },
+    "tooltip_cols": {
+      "type": ["object", "null"]
+    },
+    "excludedAminoAcids": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "type": ["string", "null"]
+    },
+    "title": {
+      "type": ["string", "null"]
+    },
+    "floor": {
+      "type": ["boolean", "null"]
+    },
+    "summary_stat": {
+      "type": ["string", "null"],
+      "enum": ["sum", "mean", "median", "max", "min"]
+    }
+  },
+  "required": ["mut_metric_df", "sitemap", "metric_col", "conditions", "condition_colors", "alphabet", "pdb", "dataChains", "excludeChains"]
+}
+```

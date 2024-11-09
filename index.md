@@ -14,6 +14,9 @@ hero:
       text: Vignettes
       link: /visualizing-data/vignettes/
     - theme: alt
+      text: Read the paper
+      link: https://joss.theoj.org/papers/10.21105/joss.06129#
+    - theme: alt
       text: Use the Tool!
       link: https://dms-viz.github.io/
 

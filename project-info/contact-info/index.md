@@ -8,8 +8,6 @@ If you have any suggestions for how to improve the tool, or if you encounter any
 
 ## Citation
 
-If you link to `dms-viz` visualizations in your paper, please cite us: 
+If you link to `dms-viz` visualizations in your paper, please cite us:
 
-```text
-Hannon WW, Bloom JD. dms-viz: Structure-informed visualizations for deep mutational scanning and other mutation-based datasets. bioRxiv [Preprint]. 2023 Nov 1:2023.10.29.564578. doi: 10.1101/2023.10.29.564578. PMID: 37961289; PMCID: PMC10634933.
-```
+> Hannon et al., (2024). <em>dms-viz</em>: Structure-informed visualizations for deep mutational scanning and other mutation-based datasets. Journal of Open Source Software, 9(99), 6129, <https://doi.org/10.21105/joss.06129>
